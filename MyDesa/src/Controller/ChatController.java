@@ -21,6 +21,13 @@ public class ChatController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println("bintang");
+        System.out.println("bintang");
+        System.out.println("bintang");
+        System.out.println("bintang");
+        System.out.println("bintang");
+        System.out.println("bintang");
+        System.out.println("bintang");
+        System.out.println("bintang");
     }    
     
 }
