@@ -1,0 +1,7 @@
+{
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "MyDesa\\lib\\fontawesomefx-fontawesome-4.7.0-9.1.2.jar",
+    "MyDesa\\lib\\fontawesomefx-commons-9.1.2.jar"
+  ]
+}

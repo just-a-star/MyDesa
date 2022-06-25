@@ -4,6 +4,7 @@
  */
 package Main;
 
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -23,25 +24,18 @@ public class MyDesa extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Mendaftar1.fxml"));
 
-            Parent root = (Parent) loader.load();
-
-            Scene scene = new Scene(root, 1280, 720);
-
-            stage.setTitle("Hello World!");
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/Mendaftar1.fxml"));
+            Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
-
 }

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mendaftarC">
    <children>
       <Label layoutX="132.0" layoutY="51.0" prefHeight="75.0" prefWidth="395.0" text="Selamat Datang di MyDesa">
          <font>
@@ -21,7 +21,7 @@
       <Label layoutX="144.0" layoutY="237.0" prefHeight="32.0" prefWidth="147.0" text="Tempat Lahir" />
       <TextField layoutX="143.0" layoutY="341.0" />
       <Label layoutX="144.0" layoutY="307.0" prefHeight="32.0" prefWidth="147.0" text="Tempat Lahir" />
-      <Button layoutX="341.0" layoutY="525.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="141.0" text="Daftar akun" />
+      <Button fx:id="btnNext" layoutX="341.0" layoutY="525.0" mnemonicParsing="false" onAction="#switchToMendaftar1" prefHeight="64.0" prefWidth="141.0" text="Daftar akun" />
       <ImageView fitHeight="728.0" fitWidth="780.0" layoutX="536.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true" />
       <TextField layoutX="143.0" layoutY="408.0" />
       <Label layoutX="144.0" layoutY="374.0" prefHeight="32.0" prefWidth="147.0" text="Nomor HP" />
