@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tvDataMasyarakat" layoutX="28.0" layoutY="94.0" prefHeight="371.0" prefWidth="1232.0">
+        <columns>
+          <TableColumn fx:id="TCNama" prefWidth="77.33333587646484" text="Role" />
+            <TableColumn fx:id="TCNama1" prefWidth="180.66666412353516" text="Nama" />
+          <TableColumn fx:id="tcAlamat" minWidth="0.0" prefWidth="137.66665649414062" text="Alamat" />
+            <TableColumn fx:id="tcNIK" prefWidth="126.3333740234375" text="NIK" />
+            <TableColumn fx:id="tcTempatLahir" prefWidth="124.6666259765625" text="Tempat lahir" />
+            <TableColumn fx:id="tcTanggalLahir" prefWidth="95.3333740234375" text="Tanggal lahir" />
+            <TableColumn fx:id="tcNomorHP" minWidth="8.3333740234375" prefWidth="139.66668701171875" text="Nomor HP" />
+            <TableColumn fx:id="tcEmail" prefWidth="138.6666259765625" text="Email" />
+            <TableColumn fx:id="tcUsername" prefWidth="107.333251953125" text="Username" />
+            <TableColumn fx:id="tcUsername1" minWidth="0.0" prefWidth="103.666748046875" text="Password" />
+            <TableColumn fx:id="tcEmail1" prefWidth="86.0" text="Email" />
+        </columns>
+      </TableView>
+      <Text layoutX="28.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Pengguna - Masyarakat">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Pengguna - Administrator">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
