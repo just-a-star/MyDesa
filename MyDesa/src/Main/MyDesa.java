@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMain.java to edit this template
  */
-package Main;
+package main;
+
+import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -21,17 +23,17 @@ import javafx.stage.Stage;
 public class MyDesa extends Application {
 
     @Override
-    public void start(Stage stage) {
-        try {
+    public void start(Stage stage) throws IOException {
+        // try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("/view/StatistikPengguna1.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // } catch (Exception e) {
+        // e.printStackTrace();
+        // }
     }
 
     public static void main(String[] args) {

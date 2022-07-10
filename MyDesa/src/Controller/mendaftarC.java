@@ -31,7 +31,7 @@ public class mendaftarC {
 
   public void switchToMendaftar1(ActionEvent event) throws IOException {
 
-    root = FXMLLoader.load(getClass().getResource("/fxml/MenuAplikasi.fxml"));
+    root = FXMLLoader.load(getClass().getResource("/view/MenuAplikasi.fxml"));
 
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
@@ -41,7 +41,7 @@ public class mendaftarC {
   }
 
   public void switchScene(ActionEvent event) throws IOException {
-    root = FXMLLoader.load(getClass().getResource("/src/fxml/Mendaftar2.fxml"));
+    root = FXMLLoader.load(getClass().getResource("/src/view/Mendaftar2.fxml"));
 
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
@@ -50,7 +50,7 @@ public class mendaftarC {
   }
 
   public void switchToMendaftar2(ActionEvent event) throws IOException {
-    root = FXMLLoader.load(getClass().getResource("/fxml/Mendaftar2.fxml"));
+    root = FXMLLoader.load(getClass().getResource("/view/Mendaftar2.fxml"));
 
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);

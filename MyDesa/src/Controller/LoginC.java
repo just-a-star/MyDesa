@@ -52,15 +52,13 @@ public class LoginC {
       alert.setContentText("Selamat datang " + admin.getNama());
       alert.showAndWait();
 
-      root = FXMLLoader.load(getClass().getResource("/fxml/MenuAplikasi.fxml"));
+      root = FXMLLoader.load(getClass().getResource("/view/MenuAplikasi.fxml"));
 
       stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
       scene = new Scene(root);
       stage.setScene(scene);
       stage.show();
 
-      tfUsername.setText("");
-      tfPassword.setText("");
     } else {
       Alert alert = new Alert(AlertType.ERROR);
       alert.setTitle("Error");
@@ -68,36 +66,9 @@ public class LoginC {
       alert.setContentText("Username atau Password Salah");
       alert.showAndWait();
     }
+    // tfUsername.setText("");
+    // tfPassword.setText("");
 
-  }
-
-  public void switchToMendaftar1(ActionEvent event) throws IOException {
-
-    root = FXMLLoader.load(getClass().getResource("/fxml/MenuAplikasi.fxml"));
-
-    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    scene = new Scene(root);
-    stage.setScene(scene);
-    stage.show();
-
-  }
-
-  public void switchScene(ActionEvent event) throws IOException {
-    root = FXMLLoader.load(getClass().getResource("/src/fxml/Mendaftar2.fxml"));
-
-    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    scene = new Scene(root);
-    stage.setScene(scene);
-    stage.show();
-  }
-
-  public void switchToMendaftar2(ActionEvent event) throws IOException {
-    root = FXMLLoader.load(getClass().getResource("/fxml/Mendaftar2.fxml"));
-
-    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    scene = new Scene(root);
-    stage.setScene(scene);
-    stage.show();
   }
 
   // @Override

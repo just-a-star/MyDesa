@@ -21,9 +21,9 @@ public class Admin {
   private String password;
 
   public Admin() {
-    this.nama = "Shroud";
-    this.userName = "Shroud";
-    this.password = "Shroud";
+    this.nama = "Bintang Rahmatullah";
+    this.userName = "Admin";
+    this.password = "Admin";
   }
 
   public String getNama() {
