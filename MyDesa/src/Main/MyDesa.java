@@ -26,10 +26,11 @@ public class MyDesa extends Application {
     public void start(Stage stage) throws IOException {
         // try {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/view/StatistikPengguna1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        stage.setTitle("MyDesa");
 
         // } catch (Exception e) {
         // e.printStackTrace();

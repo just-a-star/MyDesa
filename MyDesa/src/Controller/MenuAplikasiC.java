@@ -41,6 +41,9 @@ public class MenuAplikasiC {
   private Button btnBack;
 
   @FXML
+  private Button btnStatistik;
+
+  @FXML
   private BorderPane homepagePane;
 
   public void switchToMendaftar2(ActionEvent event) throws IOException {
@@ -58,6 +61,13 @@ public class MenuAplikasiC {
   private void toHomepage(ActionEvent event) throws IOException {
     OpenScene object = new OpenScene();
     Pane halaman = object.getPane("Homepage");
+    homepagePane.setCenter(halaman);
+  }
+
+  @FXML
+  private void toStatistik(ActionEvent event) throws IOException {
+    OpenScene object = new OpenScene();
+    Pane halaman = object.getPane("StatistikPengguna1");
     homepagePane.setCenter(halaman);
   }
 }

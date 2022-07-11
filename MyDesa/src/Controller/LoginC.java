@@ -59,6 +59,9 @@ public class LoginC {
       stage.setScene(scene);
       stage.show();
 
+      String css = this.getClass().getResource("/css/MenuAplikasi.css").toExternalForm();
+      scene.getStylesheets().add(css);
+
     } else {
       Alert alert = new Alert(AlertType.ERROR);
       alert.setTitle("Error");
