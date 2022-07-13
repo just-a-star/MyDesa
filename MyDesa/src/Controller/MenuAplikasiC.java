@@ -32,6 +32,9 @@ public class MenuAplikasiC {
   private Label labelMenu;
 
   @FXML
+  private Button btnPendataan;
+
+  @FXML
   private Button BtnHome;
 
   @FXML
@@ -68,6 +71,13 @@ public class MenuAplikasiC {
   private void toStatistik(ActionEvent event) throws IOException {
     OpenScene object = new OpenScene();
     Pane halaman = object.getPane("StatistikPengguna1");
+    homepagePane.setCenter(halaman);
+  }
+
+  @FXML
+  private void toPendataan(ActionEvent event) throws IOException {
+    OpenScene object = new OpenScene();
+    Pane halaman = object.getPane("PendataanForm");
     homepagePane.setCenter(halaman);
   }
 }

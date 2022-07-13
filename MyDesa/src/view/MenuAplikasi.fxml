@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
@@ -9,18 +11,31 @@
    <children>
       <BorderPane fx:id="homepagePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <Pane prefHeight="335.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="335.0" prefWidth="180.0" style="-fx-background-color: #e6ebf0;" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="33.0" layoutY="103.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" text="Pendataan" />
-                  <Button layoutX="33.0" layoutY="159.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" text="Resi" />
-                  <Button fx:id="btnStatistik" layoutX="33.0" layoutY="214.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="115.0" text="Statistik" />
-                  <Button layoutX="33.0" layoutY="48.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" text="Homepage" />
+                  <Button id="btnMenu" fx:id="btnPendataan" layoutX="33.0" layoutY="113.0" mnemonicParsing="false" onAction="#toPendataan" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #72a4d6;" text="Pendataan" />
+                  <Button id="btnMenu" layoutX="33.0" layoutY="169.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #72a4d6;" text="Resi" />
+                  <Button id="btnMenu" fx:id="btnStatistik" layoutX="33.0" layoutY="224.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #72a4d6;" text="Statistik" />
+                  <Button id="btnMenu" layoutX="33.0" layoutY="58.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" text="Homepage" />
+                  <Button layoutX="23.0" layoutY="641.0" mnemonicParsing="false" style="-fx-background-color: #72a4d6;" text="Keluar" />
+                  <Button layoutX="69.0" layoutY="594.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #c2daf2;">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="25" text="" />
+                     </graphic>
+                  </Button>
+                  <Button id="btnMenu" fx:id="btnStatistik1" layoutX="33.0" layoutY="277.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #72a4d6;" text="Akun" />
+                  <Pane layoutY="333.0" prefHeight="3.0" prefWidth="182.0" style="-fx-background-color: #293b4d;" />
+                  <Label layoutX="66.0" layoutY="346.0" prefHeight="17.0" prefWidth="42.0" text="Recent" />
+                  <Button fx:id="btnStatistik11" layoutX="29.0" layoutY="378.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="0.0" prefWidth="115.0" style="-fx-background-color: #e3f1ff;" text="Akun" />
                </children>
             </Pane>
          </left>
          <center>
-            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <Pane prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER" />
          </center>
+         <right>
+            <Pane prefHeight="720.0" prefWidth="278.0" BorderPane.alignment="CENTER" />
+         </right>
       </BorderPane>
    </children>
 </AnchorPane>
