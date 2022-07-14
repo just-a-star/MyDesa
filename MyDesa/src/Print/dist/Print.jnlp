@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Print.jnlp">
+    <information>
+        <title>Print</title>
+        <vendor>Xeesh</vendor>
+        <description>null</description>
+        <offline-allowed/>
+    </information>
+    <update check="always"/>
+    <resources>
+        <j2se version="9+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="Print.jar" size="2627" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="800" height="600" main-class="print.Print" name="Print"/>
+</jnlp>
+
