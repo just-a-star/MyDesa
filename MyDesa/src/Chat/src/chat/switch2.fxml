@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.28275401069518713" prefHeight="400.0" prefWidth="600.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="294.0" />
+            <ScrollPane prefHeight="243.0" prefWidth="270.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="558.0" prefWidth="409.0">
+                     <children>
+                        <Label layoutX="170.0" layoutY="21.0" text="New Chat">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="chat1" layoutX="14.0" layoutY="61.0" prefHeight="54.0" prefWidth="374.0" style="-fx-background-color: #e9e9e9;">
+                           <children>
+                              <Label layoutX="155.0" layoutY="18.0" text="Aparat Desa" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="chat11" layoutX="14.0" layoutY="126.0" prefHeight="54.0" prefWidth="374.0" style="-fx-background-color: #e9e9e9;">
+                           <children>
+                              <Label layoutX="150.0" layoutY="18.0" text="Pembuat KK" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="chat12" layoutX="14.0" layoutY="192.0" prefHeight="54.0" prefWidth="374.0" style="-fx-background-color: #e9e9e9;">
+                           <children>
+                              <Label layoutX="150.0" layoutY="18.0" text="Pembuat akta" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="chat111" layoutX="14.0" layoutY="257.0" prefHeight="54.0" prefWidth="374.0" style="-fx-background-color: #e9e9e9;">
+                           <children>
+                              <Label layoutX="155.0" layoutY="18.0" text="Kepala Desa" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
