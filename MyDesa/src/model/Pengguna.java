@@ -6,27 +6,31 @@ public class Pengguna {
 
   String Nama;
   String Username;
-  long NIK;
+  String NIK;
   String TempatLahir;
-  Date TanggalLahir;
+  String TanggalLahir;
   String NomorHP;
   String Email;
   String Password;
-  String Role;
+  String Pekerjaan;
   String Alamat;
+  String NomorKK;
+  String JenisKelamin;
 
-  public Pengguna(String nama, String username, long nIK, String tempatLahir, Date tanggalLahir, String nomorHP,
-      String email, String password, String role, String alamat) {
-    this.Nama = nama;
-    this.Username = username;
-    this.NIK = nIK;
-    this.TempatLahir = tempatLahir;
-    this.TanggalLahir = tanggalLahir;
-    this.NomorHP = nomorHP;
-    this.Email = email;
-    this.Password = password;
-    this.Role = role;
-    this.Alamat = alamat;
+  public Pengguna(String nama, String username, String nIK, String tempatLahir, String tanggalLahir, String nomorHP,
+      String email, String password, String pekerjaan, String alamat, String nomorKK, String jenisKelamin) {
+    Nama = nama;
+    Username = username;
+    NIK = nIK;
+    TempatLahir = tempatLahir;
+    TanggalLahir = tanggalLahir;
+    NomorHP = nomorHP;
+    Email = email;
+    Password = password;
+    Pekerjaan = pekerjaan;
+    Alamat = alamat;
+    NomorKK = nomorKK;
+    JenisKelamin = jenisKelamin;
   }
 
   public String getNama() {
@@ -45,11 +49,11 @@ public class Pengguna {
     Username = username;
   }
 
-  public long getNIK() {
+  public String getNIK() {
     return NIK;
   }
 
-  public void setNIK(long nIK) {
+  public void setNIK(String nIK) {
     NIK = nIK;
   }
 
@@ -61,11 +65,11 @@ public class Pengguna {
     TempatLahir = tempatLahir;
   }
 
-  public Date getTanggalLahir() {
+  public String getTanggalLahir() {
     return TanggalLahir;
   }
 
-  public void setTanggalLahir(Date tanggalLahir) {
+  public void setTanggalLahir(String tanggalLahir) {
     TanggalLahir = tanggalLahir;
   }
 
@@ -93,12 +97,12 @@ public class Pengguna {
     Password = password;
   }
 
-  public String getRole() {
-    return Role;
+  public String getPekerjaan() {
+    return Pekerjaan;
   }
 
-  public void setRole(String role) {
-    Role = role;
+  public void setPekerjaan(String pekerjaan) {
+    Pekerjaan = pekerjaan;
   }
 
   public String getAlamat() {
@@ -109,4 +113,19 @@ public class Pengguna {
     Alamat = alamat;
   }
 
+  public String getNomorKK() {
+    return NomorKK;
+  }
+
+  public void setNomorKK(String nomorKK) {
+    NomorKK = nomorKK;
+  }
+
+  public String getJenisKelamin() {
+    return JenisKelamin;
+  }
+
+  public void setJenisKelamin(String jenisKelamin) {
+    JenisKelamin = jenisKelamin;
+  }
 }

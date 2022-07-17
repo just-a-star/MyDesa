@@ -2,7 +2,7 @@ package controller;
 
 import java.io.IOException;
 
-import javax.print.DocFlavor.URL;
+// import javax.print.DocFlavor.URL;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import main.MyDesa;
+// import main.MyDesa;
 import util.OpenScene;
 
 public class MenuAplikasiC {
@@ -45,6 +45,9 @@ public class MenuAplikasiC {
 
   @FXML
   private Button btnStatistik;
+
+  @FXML
+  private Button btnPeriksaP;
 
   @FXML
   private BorderPane homepagePane;
@@ -78,6 +81,13 @@ public class MenuAplikasiC {
   private void toPendataan(ActionEvent event) throws IOException {
     OpenScene object = new OpenScene();
     Pane halaman = object.getPane("PendataanForm");
+    homepagePane.setCenter(halaman);
+  }
+
+  @FXML
+  private void toPeriksaP(ActionEvent event) throws IOException {
+    OpenScene object = new OpenScene();
+    Pane halaman = object.getPane("periksaPendataan");
     homepagePane.setCenter(halaman);
   }
 }

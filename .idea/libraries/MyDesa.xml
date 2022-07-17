@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MyDesa">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MyDesa/dist/MyDesa.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

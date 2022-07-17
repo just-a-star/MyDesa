@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.periksaPendataan">
+   <children>
+      <TableView fx:id="table" layoutX="58.0" layoutY="40.0" prefHeight="451.0" prefWidth="1120.0">
+        <columns>
+          <TableColumn fx:id="tCUsername" prefWidth="120.0" text="Username" />
+            <TableColumn fx:id="tCEmail" prefWidth="120.0" text="Email" />
+            <TableColumn fx:id="tCNomorHP" prefWidth="120.0" text="Nomor HP" />
+          <TableColumn fx:id="tCNamaAsli" prefWidth="120.0" text="Nama Asli" />
+            <TableColumn fx:id="tCNIK" prefWidth="120.0" text="NIK" />
+            <TableColumn fx:id="tCNoKK" prefWidth="120.0" text="No Kartu Keluarga" />
+            <TableColumn fx:id="tCTempatLahir" prefWidth="120.0" text="Tempat Lahir" />
+            <TableColumn fx:id="tCTanggalLahir" prefWidth="120.0" text="Tanggal Lahir" />
+            <TableColumn fx:id="tCAlamat" prefWidth="120.0" text="Alamat" />
+            <TableColumn fx:id="tCRT" prefWidth="120.0" text="RT" />
+            <TableColumn fx:id="tCRW" prefWidth="120.0" text="RW" />
+            <TableColumn fx:id="tCPekerjaan" prefWidth="120.0" text="Pekerjaan" />
+            <TableColumn fx:id="tCJenisKelamin" prefWidth="120.0" text="Jenis Kelamin" />
+            <TableColumn fx:id="tCStatusKawin" prefWidth="120.0" text="Status Kawin" />
+            <TableColumn fx:id="tCKewarganegaraan" prefWidth="120.0" text="Kewarganegaraan" />
+            <TableColumn fx:id="tCAgama" prefWidth="120.0" text="Agama" />
+            <TableColumn fx:id="tCGolDarah" prefWidth="120.0" text="Gol Darah" />
+            <TableColumn fx:id="tCPassword" prefWidth="120.0" text="Password" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
