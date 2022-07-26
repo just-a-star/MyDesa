@@ -2,17 +2,20 @@
   font-family: "Arial";
 }
 #paneUtama {
--fx-background-color: #b8d1d6;
+-fx-background-color: #598392;
+}
+#paneMid {
+  -fx-background-color: #EFF6E0;
 }
 #btnMenuUtama {
-  -fx-background-color: #72a4d6;
+  -fx-background-color: #EFF6E0;
   -fx-text-fill: black;
   //make text bold
   -fx-font-weight: 700;
   -fx-text-bold: true;
 }
 #btnRecent {
-  -fx-background-color: #b8d1d6;
+  -fx-background-color: #EFF6E0;
   // -fx-background-opacity: 0.5;
   -fx-text-fill:black;
   -fx-font-weight: 600;

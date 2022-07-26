@@ -12,10 +12,10 @@
    <children>
       <BorderPane fx:id="homepagePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <Pane id="paneUtama" prefHeight="720.0" prefWidth="200.0" stylesheets="@../css/MenuAplikasi.css" BorderPane.alignment="CENTER">
+            <Pane id="paneUtama" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: AEC3B0;" stylesheets="@../css/MenuAplikasi.css" BorderPane.alignment="CENTER">
                <children>
                   <Button id="btnMenuUtama" fx:id="btnPendataan" layoutX="30.0" layoutY="110.0" mnemonicParsing="false" onAction="#toPendataan" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Pendataan(P)" />
-                  <Button id="btnMenuUtama" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Resi" />
+                  <Button id="btnMenuUtama" fx:id="btnResi" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" onAction="#toResi" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Resi" />
                   <Button id="btnMenuUtama" fx:id="btnStatistik" layoutX="30.0" layoutY="218.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Statistik(A)" />
                   <Button id="btnMenuUtama" fx:id="btnHomepage" layoutX="30.0" layoutY="56.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Homepage" />
                   <Button layoutX="23.0" layoutY="641.0" mnemonicParsing="false" style="-fx-background-color: #72a4d6;" stylesheets="@../css/MenuAplikasi.css" text="Keluar" />
@@ -40,7 +40,7 @@
             </Pane>
          </left>
          <center>
-            <Pane prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER" />
+            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER" />
          </center>
          <right>
             <Pane prefHeight="720.0" prefWidth="278.0" BorderPane.alignment="CENTER" />

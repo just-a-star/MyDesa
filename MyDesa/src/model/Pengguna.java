@@ -33,6 +33,19 @@ public class Pengguna {
     JenisKelamin = jenisKelamin;
   }
 
+  public Pengguna(String nama, String nIK, String tempatLahir, String tanggalLahir, String nomorHP, String email, String pekerjaan, String alamat, String nomorKK, String jenisKelamin) {
+    Nama = nama;
+    NIK = nIK;
+    TempatLahir = tempatLahir;
+    TanggalLahir = tanggalLahir;
+    NomorHP = nomorHP;
+    Email = email;
+    Pekerjaan = pekerjaan;
+    Alamat = alamat;
+    NomorKK = nomorKK;
+    JenisKelamin = jenisKelamin;
+  }
+
   public String getNama() {
     return Nama;
   }

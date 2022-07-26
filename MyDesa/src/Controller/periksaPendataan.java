@@ -1,172 +1,231 @@
 package controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import model.Resi;
 import model.modelKtp;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 public class periksaPendataan implements Initializable {
-  @FXML
-  private TableView table;
-  // @FXML
-  // private TextField tfUsername;
-  // @FXML
-  // private TextField tfEmail;
-  // @FXML
-  // private TextField tfNomorHP;
-  // @FXML
-  // private TextField tfNamaAsli;
-  // @FXML
-  // private TextField tfNIK;
-  // @FXML
-  // private TextField tfNoKK;
-  // @FXML
-  // private TextField tfTempatLahir;
-  // @FXML
-  // private TextField tfTanggalLahir;
-  // @FXML
-  // private TextField tfAlamat;
-  // @FXML
-  // private TextField tfRT;
-  // @FXML
-  // private TextField tfRW;
-  // @FXML
-  // private TextField tfPekerjaan;
-  // @FXML
-  // private TextField tfJenisKelamin;
-  // @FXML
-  // private TextField tfStatusKawin;
-  // @FXML
-  // private TextField tfKewarganegaraan;
-  // @FXML
-  // private TextField tfAgama;
-  // @FXML
-  // private TextField tfGolDarah;
+    ObservableList<modelKtp> dataKtp = pendataanForm.dataKtp;
+    ObservableList<Resi> dataResi = pendataanForm.dataResi;
+    ResiC resiC = new ResiC();
+    //    table = resiC.table.getItems();
+    @FXML
+    private TableView<modelKtp> ktp;
+    @FXML
+    private TableColumn<modelKtp, String> tCEmail;
+    @FXML
+    private TableColumn<modelKtp, String> tCNomorHP;
+    @FXML
+    private TableColumn<modelKtp, String> tCNamaAsli;
+    @FXML
+    private TableColumn<modelKtp, String> tCNIK;
+    @FXML
+    private TableColumn<modelKtp, String> tCNoKK;
+    @FXML
+    private TableColumn<modelKtp, String> tCTempatLahir;
+    @FXML
+    private TableColumn<modelKtp, String> tCTanggalLahir;
+    @FXML
+    private TableColumn<modelKtp, String> tCAlamat;
+    @FXML
+    private TableColumn<modelKtp, String> tCRT;
+    @FXML
+    private TableColumn<modelKtp, String> tCRW;
+    @FXML
+    private TableColumn<modelKtp, String> tCPekerjaan;
+    @FXML
+    private TableColumn<modelKtp, String> tCJenisKelamin;
+    @FXML
+    private TableColumn<modelKtp, String> tCStatusKawin;
+    @FXML
+    private TableColumn<modelKtp, String> tCKewarganegaraan;
+    @FXML
+    private TableColumn<modelKtp, String> tCAgama;
+    @FXML
+    private TableColumn<modelKtp, String> tCGolDarah;
+    @FXML
+    private TableColumn<modelKtp, String> tCStatus;
+    @FXML
+    private TableColumn<modelKtp, Integer> tCID;
+    @FXML
+    private Button btnSubmit;
+    @FXML
+    private Label lbAgama;
+    @FXML
+    private Label lbAlamat;
+    @FXML
+    private Label lbEmail;
+    @FXML
+    private Label lbGolDarah;
+    @FXML
+    private Label lbID;
+    @FXML
+    private Label lbJenisKelamin;
+    @FXML
+    private Label lbKewarganegaraan;
+    @FXML
+    private Label lbNama;
+    @FXML
+    private Label lbNoKK;
+    @FXML
+    private Label lbNomorHP;
+    @FXML
+    private Label lbPekerjaan;
+    @FXML
+    private Label lbRT;
+    @FXML
+    private Label lbRW;
+    @FXML
+    private Label lbStatus;
+    @FXML
+    private Label lbStatusKawin;
+    @FXML
+    private Label lbTanggalLahir;
+    @FXML
+    private Label lbTempatLahir;
+    @FXML
+    private TextField tFID;
+    @FXML
+    private TextField tFStatus;
+    @FXML
+    private TextField tFKeterangan;
+    @FXML
+    private DatePicker tFDatePicker;
 
-  @FXML
-  private TableColumn tCAksi;
-  @FXML
-  private TableColumn tCUsername;
-  @FXML
-  private TableColumn tCEmail;
-  @FXML
-  private TableColumn tCNomorHP;
-  @FXML
-  private TableColumn tCNamaAsli;
-  @FXML
-  private TableColumn tCNIK;
-  @FXML
-  private TableColumn tCNoKK;
-  @FXML
-  private TableColumn tCTempatLahir;
-  @FXML
-  private TableColumn tCTanggalLahir;
-  @FXML
-  private TableColumn tCAlamat;
-  @FXML
-  private TableColumn tCRT;
-  @FXML
-  private TableColumn tCRW;
-  @FXML
-  private TableColumn tCPekerjaan;
-  @FXML
-  private TableColumn tCJenisKelamin;
-  @FXML
-  private TableColumn tCStatusKawin;
-  @FXML
-  private TableColumn tCKewarganegaraan;
-  @FXML
-  private TableColumn tCAgama;
-  @FXML
-  private TableColumn tCGolDarah;
-  @FXML
-  private TableColumn tCPassword;
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
 
-  @FXML
-  private Button btnBack;
+        tCNamaAsli.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nama"));
+        tCID.setCellValueFactory(new PropertyValueFactory<modelKtp, Integer>("id"));
+        tCNIK.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nIK"));
 
-  ObservableList data = observableArrayList(
-      new modelKtp("Bintang Rahmatullah", "bint_r", "72195878951329", "Palu",
-          "18/09/20", "09887641232",
-          "bintang@gmail.com", "1234", "Mahasiswa", "Jln. Kaliurang",
-          "712812788978124", "Laki-laki", "005", "001", "B",
-          "Belum Kawin", "WNI", "Islam"),
-      new modelKtp("Bintang Rahmatullah", "bint_r", "72195878951329", "Palu",
-          "18/09/20", "09887641232",
-          "bintang@gmail.com", "1234", "Mahasiswa", "Jln. Kaliurang",
-          "712812788978124", "Laki-laki", "005", "001", "B",
-          "Belum Kawin", "WNI", "Islam"));
+        tCTempatLahir.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("tempatLahir"));
+        tCTanggalLahir.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("tanggalLahir"));
+        tCNomorHP.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nomorHP"));
+        tCEmail.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("email"));
+        tCStatus.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("status"));
+        tCPekerjaan.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("pekerjaan"));
+        tCAlamat.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("alamat"));
+        tCNoKK.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nomorKK"));
+        tCJenisKelamin.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("jenisKelamin"));
 
-  // @FXML
-  // private void handleButtonActions(ActionEvent event) {
-  // String temp0 = tfNamaAsli.getText();
-  // String temp1 = tfUsername.getText();
-  // String temp2 = tfEmail.getText();
-  // String temp3 = tfNomorHP.getText();
-  // String temp4 = tfNamaAsli.getText();
-  // String temp5 = tfNIK.getText();
-  // String temp6 = tfNoKK.getText();
-  // String temp7 = tfTempatLahir.getText();
-  // String temp8 = tfTanggalLahir.getText();
-  // String temp9 = tfAlamat.getText();
-  // String temp10 = tfRT.getText();
-  // String temp11 = tfRW.getText();
-  // String temp12 = tfPekerjaan.getText();
-  // String temp13 = tfJenisKelamin.getText();
-  // String temp14 = tfStatusKawin.getText();
-  // String temp15 = tfKewarganegaraan.getText();
-  // String temp16 = tfAgama.getText();
-  // String temp17 = tfGolDarah.getText();
-  // data.add(new modelKtp(temp0, temp1, temp2, temp3, temp4, temp5, temp6, temp7,
-  // temp8, temp9, temp10, temp11, temp12,
-  // temp13, temp14, temp15, temp16, temp17));
-  // } // end of handleButtonActions);
+        tCRT.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("rT"));
+        tCRW.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("rW"));
+        tCGolDarah.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("golDarah"));
+        tCStatusKawin.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("statusKawin"));
+        tCKewarganegaraan.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("kewargaNegaraan"));
+        tCAgama.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("agama"));
 
-  // tfNama.setText("");
-  // tfEmail.setText("");
-  // tfPassword.setText("");
-  // tfNomorHP.setText("");
+        ktp.setItems(dataKtp);
+    }
 
-  /**
-   * Initializes the controller class.
-   * 
-   * @param url
-   * @param rb
-   */
-  @Override
-  public void initialize(URL url, ResourceBundle rb) {
+    @FXML
+    void handleSubmit(ActionEvent event) {
+        ubahDataKtp();
+        ubahDataResi();
 
-    tCNamaAsli.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nama"));
-    tCUsername.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("username"));
-    tCNIK.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nIK"));
+    }
 
-    tCTempatLahir.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("tempatLahir"));
-    tCTanggalLahir.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("tanggalLahir"));
-    tCNomorHP.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nomorHP"));
-    tCEmail.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("email"));
-    tCPassword.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("password"));
-    tCPekerjaan.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("pekerjaan"));
-    tCAlamat.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("alamat"));
-    tCNoKK.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("nomorKK"));
-    tCJenisKelamin.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("jenisKelamin"));
+    void ubahDataKtp() {
+        ObservableList<modelKtp> currentTableData = ktp.getItems();
 
-    tCRT.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("rT"));
-    tCRW.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("rW"));
-    tCGolDarah.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("golDarah"));
-    tCStatusKawin.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("statusKawin"));
-    tCKewarganegaraan.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("kewargaNegaraan"));
-    tCAgama.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("agama"));
+        int currentId = Integer.parseInt(tFID.getText());
 
-    table.setItems(data);
-  }
+        for (modelKtp dataKtp : currentTableData) {
+            if (dataKtp.getId() == currentId) {
+                dataKtp.setId(Integer.parseInt(tFID.getText()));
+                dataKtp.setStatus(tFStatus.getText());
+                lbStatus.setText(tFStatus.getText());
+
+                ktp.setItems(currentTableData);
+                ktp.refresh();
+//                break;
+            }
+        }
+    }
+
+    //    resi = resiC.table.getItems();
+    void ubahDataResi() {
+        ObservableList<Resi> currentTableDataResi = ResiC.dataResi;
+        int currentId = Integer.parseInt(tFID.getText());
+        System.out.println(currentId);
+//        System.out.println(dataResi.get);
+        for (Resi dataResi : currentTableDataResi) {
+            System.out.println(dataResi.getId());
+            if (dataResi.getId() == currentId) {
+                dataResi.setId(Integer.parseInt(tFID.getText()));
+                dataResi.setStatus(tFStatus.getText());
+                dataResi.setKeterangan(tFKeterangan.getText());
+                dataResi.setTanggalAmbil(tFDatePicker.getValue().toString());
+
+                resiC.table.setItems(currentTableDataResi);
+                resiC.table.refresh();
+//                break;
+            }
+        }
+    }
+
+    @FXML
+    void rowClicked(MouseEvent event) {
+        modelKtp clickedData = ktp.getSelectionModel().getSelectedItem();
+//        Resi clickedDataResi = resiC.table.getSelectionModel().getSelectedItem();
+        tFID.setText(String.valueOf(clickedData.getId()));
+        tFStatus.setText(String.valueOf(clickedData.getStatus()));
+        lbAgama.setText(String.valueOf(clickedData.getAgama()));
+        lbAlamat.setText(String.valueOf(clickedData.getAlamat()));
+        lbEmail.setText(String.valueOf(clickedData.getEmail()));
+        lbGolDarah.setText(String.valueOf(clickedData.getGolDarah()));
+        lbID.setText(String.valueOf(clickedData.getId()));
+        lbJenisKelamin.setText(String.valueOf(clickedData.getJenisKelamin()));
+        lbKewarganegaraan.setText(String.valueOf(clickedData.getKewargaNegaraan()));
+        lbNama.setText(String.valueOf(clickedData.getNama()));
+        lbNoKK.setText(String.valueOf(clickedData.getNomorKK()));
+        lbNomorHP.setText(String.valueOf(clickedData.getNomorHP()));
+        lbPekerjaan.setText(String.valueOf(clickedData.getPekerjaan()));
+        lbRT.setText(String.valueOf(clickedData.getRT()));
+        lbRW.setText(String.valueOf(clickedData.getRW()));
+        lbTempatLahir.setText(String.valueOf(clickedData.getTempatLahir()));
+        lbTanggalLahir.setText(String.valueOf(clickedData.getTanggalLahir()));
+        lbStatusKawin.setText(String.valueOf(clickedData.getStatusKawin()));
+        lbStatus.setText(String.valueOf(clickedData.getStatus()));
+        ktp.refresh();
+        resiC.table.refresh();
+    }
+//  @FXML
+//  private void handleSubmit(ActionEvent event) {
+//    ObservableList<modelKtp> currentTableData = dataKtp.getItems();
+//    int current
+//    System.out.println(dataKtp.get(0).getUsername());
+//  }
+
+
+//  ObservableList data = observableArrayList(
+//      new modelKtp("Bintang Rahmatullah", "bint_r", "72195878951329", "Palu",
+//          "18/09/20", "09887641232",
+//          "bintang@gmail.com", "1234", "Mahasiswa", "Jln. Kaliurang",
+//          "712812788978124", "Laki-laki", "005", "001", "B",
+//          "Belum Kawin", "WNI", "Islam"),
+//      new modelKtp("Bintang Rahmatullah", "bint_r", "72195878951329", "Palu",
+//          "18/09/20", "09887641232",
+//          "bintang@gmail.com", "1234", "Mahasiswa", "Jln. Kaliurang",
+//          "712812788978124", "Laki-laki", "005", "001", "B",
+//          "Belum Kawin", "WNIII", "Islam"));
+
+
+    /**
+     * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
+     */
+
 }

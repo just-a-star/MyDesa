@@ -1,9 +1,5 @@
 package controller;
 
-import java.io.IOException;
-
-// import javax.print.DocFlavor.URL;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,79 +11,90 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-// import main.MyDesa;
 import util.OpenScene;
+
+import java.io.IOException;
 
 public class MenuAplikasiC {
 
-  @FXML
-  private Stage stage;
+    @FXML
+    private Stage stage;
 
-  @FXML
-  private Parent root;
+    @FXML
+    private Parent root;
 
-  @FXML
-  private Scene scene;
-  @FXML
-  private Label labelMenu;
+    @FXML
+    private Scene scene;
+    @FXML
+    private Label labelMenu;
 
-  @FXML
-  private Button btnPendataan;
+    @FXML
+    private Button btnPendataan;
 
-  @FXML
-  private Button BtnHome;
+    @FXML
+    private Button BtnHome;
 
-  @FXML
-  private Button BtnDashboard;
+    @FXML
+    private Button BtnDashboard;
 
-  @FXML
-  private Button btnBack;
+    @FXML
+    private Button btnBack;
 
-  @FXML
-  private Button btnStatistik;
+    @FXML
+    private Button btnResi;
 
-  @FXML
-  private Button btnPeriksaP;
+    @FXML
+    private Button btnStatistik;
 
-  @FXML
-  private BorderPane homepagePane;
+    @FXML
+    private Button btnPeriksaP;
 
-  public void switchToMendaftar2(ActionEvent event) throws IOException {
+    @FXML
+    private BorderPane homepagePane;
 
-    root = FXMLLoader.load(getClass().getResource("/view/Mendaftar2.fxml"));
+    public void switchToMendaftar2(ActionEvent event) throws IOException {
 
-    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    scene = new Scene(root);
-    stage.setScene(scene);
-    stage.show();
+        root = FXMLLoader.load(getClass().getResource("/view/Mendaftar2.fxml"));
 
-  }
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
-  @FXML
-  private void toHomepage(ActionEvent event) throws IOException {
-    OpenScene object = new OpenScene();
-    Pane halaman = object.getPane("Homepage");
-    homepagePane.setCenter(halaman);
-  }
+    }
 
-  @FXML
-  private void toStatistik(ActionEvent event) throws IOException {
-    OpenScene object = new OpenScene();
-    Pane halaman = object.getPane("StatistikPengguna1");
-    homepagePane.setCenter(halaman);
-  }
+    @FXML
+    private void toHomepage(ActionEvent event) throws IOException {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("Homepage");
+        homepagePane.setCenter(halaman);
+    }
 
-  @FXML
-  private void toPendataan(ActionEvent event) throws IOException {
-    OpenScene object = new OpenScene();
-    Pane halaman = object.getPane("PendataanForm");
-    homepagePane.setCenter(halaman);
-  }
+    @FXML
+    private void toStatistik(ActionEvent event) throws IOException {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("StatistikPengguna1");
+        homepagePane.setCenter(halaman);
+    }
 
-  @FXML
-  private void toPeriksaP(ActionEvent event) throws IOException {
-    OpenScene object = new OpenScene();
-    Pane halaman = object.getPane("periksaPendataan");
-    homepagePane.setCenter(halaman);
-  }
+    @FXML
+    private void toPendataan(ActionEvent event) throws IOException {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("pendataanForm");
+        homepagePane.setCenter(halaman);
+    }
+
+    @FXML
+    private void toPeriksaP(ActionEvent event) throws IOException {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("periksaPendataan");
+        homepagePane.setCenter(halaman);
+    }
+
+    @FXML
+    private void toResi(ActionEvent event) throws IOException {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("Resi");
+        homepagePane.setCenter(halaman);
+    }
 }
