@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
+   <children>
+      <BorderPane fx:id="homepagePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane id="paneUtama" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: AEC3B0;" stylesheets="@../css/MenuAplikasi.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="btnMenuUtama" fx:id="btnPendataan" layoutX="30.0" layoutY="110.0" mnemonicParsing="false" onAction="#toPendataan" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Pendataan(P)" />
+                  <Button id="btnMenuUtama" fx:id="btnResi" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" onAction="#toResi" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Resi" />
+                  <Button id="btnMenuUtama" fx:id="btnStatistik" layoutX="30.0" layoutY="218.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Statistik(A)" />
+                  <Button id="btnMenuUtama" fx:id="btnHomepage" layoutX="30.0" layoutY="56.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Homepage" />
+                  <Button layoutX="23.0" layoutY="641.0" mnemonicParsing="false" style="-fx-background-color: #72a4d6;" stylesheets="@../css/MenuAplikasi.css" text="Keluar" />
+                  <Button layoutX="80.0" layoutY="593.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #c2daf2;" stylesheets="@../css/MenuAplikasi.css">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="25" text="" />
+                     </graphic>
+                  </Button>
+                  <Button id="btnMenuUtama" fx:id="btnStatistik1" layoutX="30.0" layoutY="272.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Lihat Dokumen" />
+                  <Pane layoutY="431.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: #293b4d;" stylesheets="@../css/MenuAplikasi.css" />
+                  <Label id="btnRecent" alignment="CENTER" layoutX="37.0" layoutY="446.0" prefHeight="21.0" prefWidth="125.0" stylesheets="@../css/MenuAplikasi.css" text="Baru-baru ini" underline="true" />
+                  <Button id="btnRecent" fx:id="btnStatistik11" layoutX="11.0" layoutY="479.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="30.0" prefWidth="177.0" stylesheets="@../css/MenuAplikasi.css" text="Form Pendaftaran KTP" />
+                  <Button id="btnRecent" fx:id="btnStatistik111" layoutX="26.0" layoutY="521.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="25.0" prefWidth="147.0" stylesheets="@../css/MenuAplikasi.css" text="Surat Pendaftaran KTP" />
+                  <Button id="btnMenuUtama" fx:id="btnPeriksaP" layoutX="30.0" layoutY="327.0" mnemonicParsing="false" onAction="#toPeriksaP" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Periksa Pendataan(A)" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="14.0" prefHeight="23.0" prefWidth="110.0" text="MyDesa" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button id="btnMenuUtama" fx:id="btnStatistik121" layoutX="30.0" layoutY="380.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Akun" />
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #fffff2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="55.0" layoutY="34.0" text="Print">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="553.0" prefHeight="720.0" prefWidth="441.0" style="-fx-background-color: #808080;">
+                     <children>
+                        <AnchorPane layoutX="28.0" layoutY="63.0" prefHeight="571.0" prefWidth="389.0" style="-fx-background-color: ffffff;">
+                           <children>
+                              <TextArea layoutX="14.0" layoutY="14.0" prefHeight="547.0" prefWidth="358.0" text="1.&#9;Bagaimana Cara Menghargai Orang Lain –&#10;Hidup dalam lingkungan sosial ini mengharuskan Kamu &#10;untuk berbaur dengan bermacam-macam orang dengan &#10;berbagai jenis kepribadian. Dengan pernyataan tersebut,&#10; berarti Kamu sebagai salah satu dari lingkungan tersebut &#10;haruslah dapat dengan bijak menjaga perilaku serta &#10;sikap yang akan Kamu berikan dalam suatu lingkungan sosial tersebut.&#10;Hal itu harus dilakukan untuk menghindari adanya&#10; kesalahpahaman dan ketidak sengajaan dalam &#10;menyakiti hati seseorang. Selain itu, menjaga &#10;dan sikap akan membuat Kamu menjadi lebih mudah untuk diterima di dalam lingkungan sosial tersebut.&#10;Jika Kamu merasa masih tidak begitu menerima, &#10;Kamu dapat berpikir bahwa tiap orang yang ada&#10; di dunia ini memiliki sifat yang berbeda-beda, b&#10;egitu pula Kamu sendiri. tiap orang memiliki tolak ukur tersendiri dalam menanggapi perbedaan dan menghargai orang lain.&#10;Perbedaan sendiri tak hanya terdapat pada perbed&#10;aan karakter saja, namun juga dengan perbedaan &#10;pendapat dan prioritas kepentingan mereka yang &#10;mungkin bisa menimbulkan perasaan tersinggung &#10;alah sebuah kewajaran. Bukan hanya sebuah kewa&#10;n mereka adalah hal yang berada di luar jangkaua&#10;n Kamu dan Kamu tidak boleh memaksakannya.">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="42.0" layoutY="137.0" text="Printer">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="227.0" text="Paper">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="309.0" text="Copy">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="391.0" text="Layout">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="45.0" layoutY="165.0" prefHeight="42.0" prefWidth="352.0" promptText="epson l110" />
+                  <ComboBox layoutX="48.0" layoutY="255.0" prefHeight="42.0" prefWidth="354.0" promptText="Pilih" />
+                  <TextField fx:id="Jumlah" layoutX="48.0" layoutY="337.0" prefHeight="33.0" prefWidth="184.0" />
+                  <ComboBox layoutX="48.0" layoutY="419.0" prefHeight="42.0" prefWidth="351.0" promptText="Portrait" />
+                  <Label layoutX="48.0" layoutY="478.0" text="Margin">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="49.0" layoutY="506.0" prefHeight="42.0" prefWidth="351.0" promptText="Normal Margin" />
+               </children></Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
