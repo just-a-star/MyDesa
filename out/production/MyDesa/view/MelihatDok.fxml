@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
+   <children>
+      <BorderPane fx:id="homepagePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane id="paneUtama" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: AEC3B0;" stylesheets="@../css/MenuAplikasi.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="btnMenuUtama" fx:id="btnPendataan" layoutX="30.0" layoutY="110.0" mnemonicParsing="false" onAction="#toPendataan" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Pendataan(P)" />
+                  <Button id="btnMenuUtama" fx:id="btnResi" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" onAction="#toResi" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Resi" />
+                  <Button id="btnMenuUtama" fx:id="btnStatistik" layoutX="30.0" layoutY="218.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Statistik(A)" />
+                  <Button id="btnMenuUtama" fx:id="btnHomepage" layoutX="30.0" layoutY="56.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Homepage" />
+                  <Button layoutX="23.0" layoutY="641.0" mnemonicParsing="false" style="-fx-background-color: #72a4d6;" stylesheets="@../css/MenuAplikasi.css" text="Keluar" />
+                  <Button layoutX="80.0" layoutY="593.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #c2daf2;" stylesheets="@../css/MenuAplikasi.css">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="25" text="" />
+                     </graphic>
+                  </Button>
+                  <Button id="btnMenuUtama" fx:id="btnStatistik1" layoutX="30.0" layoutY="274.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Lihat Dokumen" />
+                  <Pane layoutY="431.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: #293b4d;" stylesheets="@../css/MenuAplikasi.css" />
+                  <Label id="btnRecent" alignment="CENTER" layoutX="37.0" layoutY="446.0" prefHeight="21.0" prefWidth="125.0" stylesheets="@../css/MenuAplikasi.css" text="Baru-baru ini" underline="true" />
+                  <Button id="btnRecent" fx:id="btnStatistik11" layoutX="11.0" layoutY="479.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="30.0" prefWidth="177.0" stylesheets="@../css/MenuAplikasi.css" text="Form Pendaftaran KTP" />
+                  <Button id="btnRecent" fx:id="btnStatistik111" layoutX="26.0" layoutY="521.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="25.0" prefWidth="147.0" stylesheets="@../css/MenuAplikasi.css" text="Surat Pendaftaran KTP" />
+                  <Button id="btnMenuUtama" fx:id="btnPeriksaP" layoutX="30.0" layoutY="327.0" mnemonicParsing="false" onAction="#toPeriksaP" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Periksa Pendataan(A)" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="14.0" prefHeight="23.0" prefWidth="110.0" text="MyDesa" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button id="btnMenuUtama" fx:id="btnStatistik121" layoutX="30.0" layoutY="380.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Akun" />
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="62.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="301.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="536.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="62.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="301.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="536.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Label layoutX="78.0" layoutY="67.0" text="Melihat Dokumen">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="129.0" fitWidth="178.0" layoutX="73.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/KTP%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="143.0" fitWidth="157.0" layoutX="322.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/kk.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="153.0" fitWidth="143.0" layoutX="573.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/download.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="162.0" fitWidth="160.0" layoutX="82.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/download.jfif" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </center>
+         <right>
+            <Pane prefHeight="720.0" prefWidth="278.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

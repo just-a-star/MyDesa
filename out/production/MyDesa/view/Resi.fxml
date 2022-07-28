@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="570.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ResiC">
    <children>
-      <TableView fx:id="table" layoutX="46.0" layoutY="32.0" prefHeight="428.0" prefWidth="717.0">
+      <TableView fx:id="table" layoutX="54.0" layoutY="71.0" onMouseClicked="#rowClicked" prefHeight="428.0" prefWidth="718.0">
         <columns>
             <TableColumn fx:id="tcNomorResi" prefWidth="105.0" text="Nomor Resi" />
           <TableColumn fx:id="tcID" prefWidth="45.0" text="ID" />
@@ -19,11 +21,14 @@
             <TableColumn fx:id="tcKeterangan" prefWidth="153.0" text="Keterangan" />
         </columns>
       </TableView>
-      <Pane layoutX="903.0" layoutY="32.0" prefHeight="428.0" prefWidth="276.0" style="-fx-background-color: Lightblue;">
+      <Pane layoutX="810.0" layoutY="45.0" prefHeight="428.0" prefWidth="276.0" style="-fx-background-color: Lightblue;">
          <children>
             <Text layoutX="28.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Keterangan Lebih Lanjut" />
             <TextArea layoutX="28.0" layoutY="74.0" prefHeight="219.0" prefWidth="215.0" text="Untuk setiap pendataan KTP anda&#10;diminta untuk membawa dokumen&#10;berupa akta kelahiran dan kartu&#10;keluarga saat pengambilan, untuk&#10;dilihat keaslian dokumen tersebut,&#10;dan juga kami akan mengambil&#10;foto anda, mohon pakai pakaian&#10;yang rapi." />
          </children>
       </Pane>
+      <TextField fx:id="tfSearch" layoutX="54.0" layoutY="32.0" />
+      <Text layoutX="54.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" />
+      <Button fx:id="btnCancel" layoutX="217.0" layoutY="32.0" mnemonicParsing="false" onAction="#cancelPendataan" text="Cancel Pendataan" />
    </children>
 </AnchorPane>
