@@ -10,58 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<<<<<<< HEAD
-<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: F2F9F1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Text layoutX="59.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilih Jenis Pendataan">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Text>
-      <TextField layoutX="59.0" layoutY="107.0" prefHeight="30.0" prefWidth="218.0" />
-      <ComboBox layoutX="319.0" layoutY="105.0" prefHeight="30.0" prefWidth="178.0" promptText="Form Pendataan" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1e5d100" height="158.0" layoutX="63.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1e5d100" height="158.0" layoutX="244.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1e5d100" height="158.0" layoutX="426.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
-      <ImageView fitHeight="22.0" fitWidth="16.0" layoutX="246.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../resources/search.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="54.0" fitWidth="76.0" layoutX="112.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../resources/id-card.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="54.0" fitWidth="76.0" layoutX="293.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../resources/family.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="54.0" fitWidth="76.0" layoutX="475.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../resources/document.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="118.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1-2 Hari" />
-      <Text layoutX="299.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2-3 Hari" />
-      <Text layoutX="482.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3-5Hari" />
-      <Text layoutX="90.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembuatan KTP">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="275.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembuatan KK">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-      <Text layoutX="451.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembuatan Akte">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Text>
-=======
 <AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: F2F9F1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
    <children>
       <Pane layoutX="48.0" layoutY="51.0" prefHeight="456.0" prefWidth="846.0">
@@ -88,12 +36,12 @@
             </ImageView>
             <ImageView fx:id="ivKK" fitHeight="54.0" fitWidth="76.0" layoutX="234.0" layoutY="169.373046875" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/family.png" />
+                  <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/family.png" />
                </image>
             </ImageView>
             <ImageView fx:id="ivAkte" fitHeight="54.0" fitWidth="76.0" layoutX="416.0" layoutY="169.373046875" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/document.png" />
+                  <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/document.png" />
                </image>
             </ImageView>
             <Text layoutX="59.0" layoutY="236.423828125" strokeType="OUTSIDE" strokeWidth="0.0" text="1-2 Hari" />
@@ -116,6 +64,5 @@
             </Text>
          </children>
       </Pane>
->>>>>>> 484942553fb9b30afc91b5e28cc41fd55984817b
    </children>
 </AnchorPane>
