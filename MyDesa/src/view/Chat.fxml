@@ -3,10 +3,13 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
    <children>
@@ -24,7 +27,7 @@
                         <FontAwesomeIconView glyphName="USER" size="25" text="" />
                      </graphic>
                   </Button>
-                  <Button id="btnMenuUtama" fx:id="btnLihatDokumen" layoutX="30.0" layoutY="272.0" mnemonicParsing="false" onAction="#toLihatDokumen" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Lihat Dokumen" />
+                  <Button id="btnMenuUtama" fx:id="btnStatistik1" layoutX="30.0" layoutY="274.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Lihat Dokumen" />
                   <Pane layoutY="431.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: #293b4d;" stylesheets="@../css/MenuAplikasi.css" />
                   <Label id="btnRecent" alignment="CENTER" layoutX="37.0" layoutY="446.0" prefHeight="21.0" prefWidth="125.0" stylesheets="@../css/MenuAplikasi.css" text="Baru-baru ini" underline="true" />
                   <Button id="btnRecent" fx:id="btnStatistik11" layoutX="11.0" layoutY="479.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="30.0" prefWidth="177.0" stylesheets="@../css/MenuAplikasi.css" text="Form Pendaftaran KTP" />
@@ -35,12 +38,20 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Button id="btnMenuUtama" fx:id="btnAkun" layoutX="30.0" layoutY="380.0" mnemonicParsing="false" onAction="#toAkun" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Akun" />
+                  <Button id="btnMenuUtama" fx:id="btnStatistik121" layoutX="30.0" layoutY="380.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Akun" />
                </children>
             </Pane>
          </left>
          <center>
-            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER" />
+            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="chatmasuk" layoutX="542.0" layoutY="132.0" prefHeight="47.0" prefWidth="223.0" />
+                  <Text fx:id="Nama" layoutX="45.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama" wrappingWidth="39.5234375" />
+                  <TextArea fx:id="pesan" layoutY="681.0" prefHeight="38.0" prefWidth="703.0" />
+                  <Button layoutX="665.0" layoutY="680.0" mnemonicParsing="false" onAction="#sendButtonAction" prefHeight="41.0" prefWidth="138.0" text="Enter" />
+                  <TextField fx:id="chatmasuk1" layoutX="31.0" layoutY="217.0" prefHeight="47.0" prefWidth="223.0" />
+               </children>
+            </Pane>
          </center>
          <right>
             <Pane prefHeight="720.0" prefWidth="278.0" BorderPane.alignment="CENTER" />

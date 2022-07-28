@@ -31,17 +31,17 @@
             </ImageView>
             <ImageView fx:id="ivKTP" fitHeight="54.0" fitWidth="76.0" layoutX="53.0" layoutY="169.373046875" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/id-card.png" />
+                  <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/id-card.png" />
                </image>
             </ImageView>
             <ImageView fx:id="ivKK" fitHeight="54.0" fitWidth="76.0" layoutX="234.0" layoutY="169.373046875" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/family.png" />
+                  <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/family.png" />
                </image>
             </ImageView>
             <ImageView fx:id="ivAkte" fitHeight="54.0" fitWidth="76.0" layoutX="416.0" layoutY="169.373046875" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/document.png" />
+                  <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/document.png" />
                </image>
             </ImageView>
             <Text layoutX="59.0" layoutY="236.423828125" strokeType="OUTSIDE" strokeWidth="0.0" text="1-2 Hari" />
