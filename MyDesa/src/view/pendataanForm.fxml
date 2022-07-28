@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="900.0" snapToPixel="false" style="-fx-background-color: #c2daf2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.pendataanForm">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="900.0" snapToPixel="false" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.pendataanForm">
    <children>
       <Label layoutX="71.0" layoutY="30.0" text="Pendataan KTP">
          <font>
@@ -19,7 +19,7 @@
       <VBox layoutX="71.0" layoutY="97.0" prefHeight="376.0" prefWidth="166.0" spacing="5.0">
          <children>
             <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Asli" />
-            <TextField fx:id="tfNamaAsli" alignment="CENTER" layoutX="15.0" layoutY="250.0" />
+            <TextField fx:id="tfNamaAsli" layoutX="15.0" layoutY="250.0" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
             <TextField fx:id="tfEmail" />
             <Text layoutX="10.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomor HP" />
@@ -43,7 +43,7 @@
       <VBox layoutX="284.0" layoutY="97.0" prefHeight="376.0" prefWidth="166.0" spacing="5.0">
          <children>
             <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat" />
-            <TextField fx:id="tfAlamat" alignment="CENTER" layoutX="15.0" layoutY="250.0" />
+            <TextField fx:id="tfAlamat" layoutX="15.0" layoutY="250.0" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RT" />
             <TextField fx:id="tfRT" />
             <Text layoutX="10.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RW" />
@@ -64,11 +64,11 @@
             <Insets bottom="15.0" />
          </padding>
       </VBox>
-      <Button fx:id="btnSubmit" layoutX="71.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleBtnSubmit" prefHeight="25.0" prefWidth="86.0" text="Submit" />
+      <Button fx:id="btnSubmit" layoutX="71.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleBtnSubmit" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: AEC3B0;" text="Submit" />
       <VBox layoutX="497.0" layoutY="97.0" prefHeight="376.0" prefWidth="166.0" spacing="5.0">
          <children>
             <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agama" />
-            <TextField fx:id="tfAgama" alignment="CENTER" layoutX="15.0" layoutY="250.0" />
+            <TextField fx:id="tfAgama" layoutX="15.0" layoutY="250.0" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Golongan Darah" />
             <TextField fx:id="tfGolDarah" />
          </children>
@@ -79,5 +79,6 @@
             <Insets bottom="15.0" />
          </padding>
       </VBox>
+      <Button fx:id="btnBack" layoutX="170.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleBtnBack" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: AEC3B0;" text="Back" />
    </children>
 </AnchorPane>
