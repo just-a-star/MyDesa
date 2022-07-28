@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: D3E8D3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="59.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilih Dokumen">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField layoutX="59.0" layoutY="107.0" prefHeight="30.0" prefWidth="218.0" />
+      <ComboBox layoutX="319.0" layoutY="105.0" prefHeight="30.0" prefWidth="178.0" />
+      <Icon content="HELP_OUTLINE" layoutX="127.0" layoutY="218.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3e8d3" height="158.0" layoutX="63.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3e8d3" height="158.0" layoutX="244.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3e8d3" height="158.0" layoutX="426.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="152.0" />
+      <ImageView fitHeight="22.0" fitWidth="16.0" layoutX="246.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Downloads/search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
