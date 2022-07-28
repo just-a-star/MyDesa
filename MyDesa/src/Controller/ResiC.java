@@ -1,11 +1,15 @@
 package controller;
 
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import model.Resi;
 
 import java.net.URL;
@@ -35,6 +39,40 @@ public class ResiC implements Initializable {
 
     @FXML
     private TableColumn<Resi, String> tcTanggalAmbil;
+
+    @FXML
+    private TextField tfSearch;
+
+    @FXML
+    private Button btnCancel;
+
+    @FXML
+    void cancelPendataan(ActionEvent event) {
+        ObservableList<Resi> currentTableDataResi = ResiC.dataResi;
+        int currentId = Integer.parseInt(tfSearch.getText());
+        System.out.println(currentId);
+//        System.out.println(dataResi.get);
+        for (Resi dataResi : currentTableDataResi) {
+            System.out.println(dataResi.getId());
+            if (dataResi.getId() == currentId) {
+//                dataResi.setId(Integer.parseInt(tfSearch.getText()));
+//                dataResi.setStatus(tFStatus.getText());
+//                dataResi.setKeterangan(tFKeterangan.getText());
+//                dataResi.setTanggalAmbil(tFDatePicker.getValue().toString());
+                table.getItems().remove(dataResi);
+                table.setItems(currentTableDataResi);
+                table.refresh();
+
+            }
+        }
+    }
+
+    @FXML
+    void rowClicked(MouseEvent event) {
+        Resi resi = table.getSelectionModel().getSelectedItem();
+        tfSearch.setText(String.valueOf(resi.getId()));
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
