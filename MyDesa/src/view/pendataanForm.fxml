@@ -46,7 +46,7 @@
          <center>
             <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="800.0" snapToPixel="false" style="-fx-background-color: #c2daf2;">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1082.0" snapToPixel="false" style="-fx-background-color: F2F9F1;">
                      <children>
                         <Label layoutX="113.0" layoutY="74.0" text="Pendataan KTP">
                            <font>
