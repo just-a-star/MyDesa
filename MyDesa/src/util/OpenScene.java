@@ -1,9 +1,10 @@
 package util;
 
+import java.net.URL;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
-
-import java.net.URL;
+import main.MyDesa;
 
 public class OpenScene {
   private Pane halaman;
@@ -17,7 +18,6 @@ public class OpenScene {
         throw new java.io.FileNotFoundException("Halaman tidak ditemukan");
       }
       halaman = new FXMLLoader().load(fileHalaman);
-
     } catch (Exception e) {
       System.out.println("Tidak ditemukan halaman tersebut.");
     }
