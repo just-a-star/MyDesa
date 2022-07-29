@@ -3,12 +3,19 @@ package controller;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model.Resi;
 import model.modelKtp;
 import util.DateIncrementer;
 import util.RandomString;
+
+import java.io.IOException;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
@@ -20,6 +27,12 @@ public class pendataanForm {
 
     // @FXML
     // private TableView table;
+    @FXML
+    private Stage stage;
+    @FXML
+    private Parent root;
+    @FXML
+    private Scene scene;
     @FXML
     private TextField tfUsername;
     @FXML
@@ -56,7 +69,24 @@ public class pendataanForm {
     private TextField tfGolDarah;
     @FXML
     private Button btnSubmit;
-//    System.out.println(tanggalNow);
+    @FXML
+    private Button btnBack;
+
+    //    System.out.println(tanggalNow);
+    @FXML
+    void handleBtnBack(ActionEvent event) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("/view/MenuAplikasi.fxml"));
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @FXML
     private void handleBtnSubmit(ActionEvent event) {
@@ -81,7 +111,7 @@ public class pendataanForm {
         ID = ID + 1;
         String keterangan = "-";
         String nomorResi = RandomString.getAlphaNumericString(10);
-        String tanggalAmbil = DateIncrementer.addOneDay(0);
+        String tanggalAmbil = DateIncrementer.addOneDay(3);
         dataKtp.add(new modelKtp(temp0, temp1, temp2, temp3, temp4, temp5, temp6, temp7,
                 temp8, temp9, temp10, temp11, temp12,
                 temp13, temp14, temp15, status, ID));

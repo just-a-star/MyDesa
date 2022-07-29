@@ -12,118 +12,76 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="900.0" snapToPixel="false" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.pendataanForm">
    <children>
-      <BorderPane fx:id="homepagePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <left>
-            <Pane id="paneUtama" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: AEC3B0;" stylesheets="@../css/MenuAplikasi.css" BorderPane.alignment="CENTER">
-               <children>
-                  <Button id="btnMenuUtama" fx:id="btnPendataan" layoutX="30.0" layoutY="110.0" mnemonicParsing="false" onAction="#toPendataan" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Pendataan(P)" />
-                  <Button id="btnMenuUtama" fx:id="btnResi" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" onAction="#toResi" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Resi" />
-                  <Button id="btnMenuUtama" fx:id="btnStatistik" layoutX="30.0" layoutY="218.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Statistik(A)" />
-                  <Button id="btnMenuUtama" fx:id="btnHomepage" layoutX="30.0" layoutY="56.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Homepage" />
-                  <Button layoutX="23.0" layoutY="641.0" mnemonicParsing="false" style="-fx-background-color: #72a4d6;" stylesheets="@../css/MenuAplikasi.css" text="Keluar" />
-                  <Button layoutX="80.0" layoutY="593.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #c2daf2;" stylesheets="@../css/MenuAplikasi.css">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="USER" size="25" text="" />
-                     </graphic>
-                  </Button>
-                  <Button id="btnMenuUtama" fx:id="btnStatistik1" layoutX="30.0" layoutY="272.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Lihat Dokumen" />
-                  <Pane layoutY="431.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: #293b4d;" stylesheets="@../css/MenuAplikasi.css" />
-                  <Label id="btnRecent" alignment="CENTER" layoutX="37.0" layoutY="446.0" prefHeight="21.0" prefWidth="125.0" stylesheets="@../css/MenuAplikasi.css" text="Baru-baru ini" underline="true" />
-                  <Button id="btnRecent" fx:id="btnStatistik11" layoutX="11.0" layoutY="479.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="30.0" prefWidth="177.0" stylesheets="@../css/MenuAplikasi.css" text="Form Pendaftaran KTP" />
-                  <Button id="btnRecent" fx:id="btnStatistik111" layoutX="26.0" layoutY="521.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="25.0" prefWidth="147.0" stylesheets="@../css/MenuAplikasi.css" text="Surat Pendaftaran KTP" />
-                  <Button id="btnMenuUtama" fx:id="btnPeriksaP" layoutX="30.0" layoutY="327.0" mnemonicParsing="false" onAction="#toPeriksaP" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Periksa Pendataan(A)" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="14.0" prefHeight="23.0" prefWidth="110.0" text="MyDesa" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Button id="btnMenuUtama" fx:id="btnStatistik121" layoutX="30.0" layoutY="380.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Akun" />
-               </children>
-            </Pane>
-         </left>
-         <center>
-            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER">
-               <children>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1082.0" snapToPixel="false" style="-fx-background-color: F2F9F1;">
-                     <children>
-                        <Label layoutX="113.0" layoutY="74.0" text="Pendataan KTP">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="290.0" layoutY="140.0" />
-                        <VBox layoutX="113.0" layoutY="141.0" spacing="5.0">
-                           <children>
-                              <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Asli" />
-                              <TextField fx:id="tfNamaAsli" alignment="CENTER" layoutX="15.0" layoutY="250.0" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-                              <TextField fx:id="tfEmail" />
-                              <Text layoutX="10.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomor HP" />
-                              <TextField fx:id="tfNomorHP" layoutX="10.0" layoutY="82.0" />
-                              <Text layoutX="10.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIK" />
-                              <TextField fx:id="tfNIK" layoutX="10.0" layoutY="133.0" />
-                              <Text layoutX="10.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomor Kartu Keluarga" />
-                              <TextField fx:id="tfNoKK" layoutX="10.0" layoutY="188.0" />
-                              <Text layoutX="10.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempat Lahir" />
-                              <TextField fx:id="tfTempatLahir" layoutX="10.0" layoutY="235.0" />
-                              <Text layoutX="10.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir" />
-                              <TextField fx:id="tfTanggalLahir" layoutX="10.0" layoutY="292.0" />
-                           </children>
-                           <opaqueInsets>
-                              <Insets bottom="20.0" top="5.0" />
-                           </opaqueInsets>
-                           <padding>
-                              <Insets bottom="15.0" />
-                           </padding>
-                        </VBox>
-                        <VBox layoutX="326.0" layoutY="141.0" spacing="5.0">
-                           <children>
-                              <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat" />
-                              <TextField fx:id="tfAlamat" alignment="CENTER" layoutX="15.0" layoutY="250.0" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RT" />
-                              <TextField fx:id="tfRT" />
-                              <Text layoutX="10.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RW" />
-                              <TextField fx:id="tfRW" layoutX="10.0" layoutY="82.0" />
-                              <Text layoutX="10.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pekerjaan" />
-                              <TextField fx:id="tfPekerjaan" layoutX="10.0" layoutY="133.0" />
-                              <Text layoutX="10.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin" />
-                              <TextField fx:id="tfJenisKelamin" layoutX="10.0" layoutY="188.0" />
-                              <Text layoutX="10.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status Kawin" />
-                              <TextField fx:id="tfStatusKawin" layoutX="10.0" layoutY="235.0" />
-                              <Text layoutX="10.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kewarganegaraan" />
-                              <TextField fx:id="tfKewarganegaraan" layoutX="10.0" layoutY="292.0" />
-                           </children>
-                           <opaqueInsets>
-                              <Insets bottom="20.0" top="5.0" />
-                           </opaqueInsets>
-                           <padding>
-                              <Insets bottom="15.0" />
-                           </padding>
-                        </VBox>
-                        <Button fx:id="btnSubmit" layoutX="113.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleBtnSubmit" text="Submit" />
-                        <VBox layoutX="539.0" layoutY="141.0" spacing="5.0">
-                           <children>
-                              <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agama" />
-                              <TextField fx:id="tfAgama" alignment="CENTER" layoutX="15.0" layoutY="250.0" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Golongan Darah" />
-                              <TextField fx:id="tfGolDarah" />
-                           </children>
-                           <opaqueInsets>
-                              <Insets bottom="20.0" top="5.0" />
-                           </opaqueInsets>
-                           <padding>
-                              <Insets bottom="15.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
-               </children></Pane>
-         </center>
-         <right>
-            <Pane prefHeight="720.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-         </right>
-      </BorderPane>
+      <Label layoutX="71.0" layoutY="30.0" text="Pendataan KTP">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="248.0" layoutY="96.0" />
+      <VBox layoutX="71.0" layoutY="97.0" prefHeight="376.0" prefWidth="166.0" spacing="5.0">
+         <children>
+            <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Asli" />
+            <TextField fx:id="tfNamaAsli" layoutX="15.0" layoutY="250.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+            <TextField fx:id="tfEmail" />
+            <Text layoutX="10.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomor HP" />
+            <TextField fx:id="tfNomorHP" layoutX="10.0" layoutY="82.0" />
+            <Text layoutX="10.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIK" />
+            <TextField fx:id="tfNIK" layoutX="10.0" layoutY="133.0" />
+            <Text layoutX="10.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomor Kartu Keluarga" />
+            <TextField fx:id="tfNoKK" layoutX="10.0" layoutY="188.0" />
+            <Text layoutX="10.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempat Lahir" />
+            <TextField fx:id="tfTempatLahir" layoutX="10.0" layoutY="235.0" />
+            <Text layoutX="10.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir" />
+            <TextField fx:id="tfTanggalLahir" layoutX="10.0" layoutY="292.0" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" top="5.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="15.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="284.0" layoutY="97.0" prefHeight="376.0" prefWidth="166.0" spacing="5.0">
+         <children>
+            <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat" />
+            <TextField fx:id="tfAlamat" layoutX="15.0" layoutY="250.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RT" />
+            <TextField fx:id="tfRT" />
+            <Text layoutX="10.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RW" />
+            <TextField fx:id="tfRW" layoutX="10.0" layoutY="82.0" />
+            <Text layoutX="10.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pekerjaan" />
+            <TextField fx:id="tfPekerjaan" layoutX="10.0" layoutY="133.0" />
+            <Text layoutX="10.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin" />
+            <TextField fx:id="tfJenisKelamin" layoutX="10.0" layoutY="188.0" />
+            <Text layoutX="10.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status Kawin" />
+            <TextField fx:id="tfStatusKawin" layoutX="10.0" layoutY="235.0" />
+            <Text layoutX="10.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kewarganegaraan" />
+            <TextField fx:id="tfKewarganegaraan" layoutX="10.0" layoutY="292.0" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" top="5.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="15.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="btnSubmit" layoutX="71.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleBtnSubmit" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: AEC3B0;" text="Submit" />
+      <VBox layoutX="497.0" layoutY="97.0" prefHeight="376.0" prefWidth="166.0" spacing="5.0">
+         <children>
+            <Text layoutX="15.0" layoutY="250.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agama" />
+            <TextField fx:id="tfAgama" layoutX="15.0" layoutY="250.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Golongan Darah" />
+            <TextField fx:id="tfGolDarah" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" top="5.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="15.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="btnBack" layoutX="170.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleBtnBack" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: AEC3B0;" text="Back" />
    </children>
 </AnchorPane>
