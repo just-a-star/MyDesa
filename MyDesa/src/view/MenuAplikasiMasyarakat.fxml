@@ -1,78 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
    <children>
       <BorderPane fx:id="homepagePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <Pane id="paneUtama" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: AEC3B0;" stylesheets="@../css/MenuAplikasi.css" BorderPane.alignment="CENTER">
                <children>
-                  <Button id="btnMenuUtama" fx:id="btnResi" layoutX="30.0" layoutY="138.0" mnemonicParsing="false" onAction="#toResi" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Resi" />
-                  <Button id="btnMenuUtama" fx:id="btnStatistik" layoutX="30.0" layoutY="183.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Statistik(A)" />
-                  <Button id="btnMenuUtama" fx:id="btnHomepage" layoutX="30.0" layoutY="90.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Homepage" />
-                  <Button layoutX="75.0" layoutY="667.0" mnemonicParsing="false" style="-fx-background-color: #72a4d6;" stylesheets="@../css/MenuAplikasi.css" text="Keluar" />
+                  <Button id="btnMenuUtama" fx:id="btnPendataan" layoutX="30.0" layoutY="110.0" mnemonicParsing="false" onAction="#toPendataan" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Pendataan" />
+                  <Button id="btnMenuUtama" fx:id="btnResi" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" onAction="#toResi" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Resi" />
+                  <Button id="btnMenuUtama" fx:id="btnStatistik" layoutX="30.0" layoutY="218.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Statistik" />
+                  <Button id="btnMenuUtama" fx:id="btnHomepage" layoutX="30.0" layoutY="56.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Homepage" />
+                  <Button layoutX="23.0" layoutY="641.0" mnemonicParsing="false" style="-fx-background-color: #72a4d6;" stylesheets="@../css/MenuAplikasi.css" text="Keluar" />
                   <Button layoutX="80.0" layoutY="593.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: #c2daf2;" stylesheets="@../css/MenuAplikasi.css">
                      <graphic>
                         <FontAwesomeIconView glyphName="USER" size="25" text="" />
                      </graphic>
                   </Button>
-                  <Button id="btnMenuUtama" fx:id="btnLihatDokumen" layoutX="30.0" layoutY="226.0" mnemonicParsing="false" onAction="#toLihatDokumen" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Lihat Dokumen" />
-                  <Pane layoutY="459.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: #293b4d;" stylesheets="@../css/MenuAplikasi.css" />
-                  <Label id="btnRecent" alignment="CENTER" layoutX="37.0" layoutY="477.0" prefHeight="21.0" prefWidth="125.0" stylesheets="@../css/MenuAplikasi.css" text="Baru-baru ini" underline="true" />
-                  <Button id="btnRecent" fx:id="btnStatistik11" layoutX="11.0" layoutY="510.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="30.0" prefWidth="177.0" stylesheets="@../css/MenuAplikasi.css" text="Form Pendaftaran KTP" />
-                  <Button id="btnRecent" fx:id="btnStatistik111" layoutX="26.0" layoutY="552.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="25.0" prefWidth="147.0" stylesheets="@../css/MenuAplikasi.css" text="Surat Pendaftaran KTP" />
-                  <Button id="btnMenuUtama" fx:id="btnPeriksaP" layoutX="30.0" layoutY="316.0" mnemonicParsing="false" onAction="#toPeriksaP" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Periksa Pendataan(A)" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="19.0" prefHeight="23.0" prefWidth="110.0" text="My" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="25.0" />
-                     </font>
-                  </Label>
-                  <Button id="btnMenuUtama" fx:id="btnAkun" layoutX="30.0" layoutY="362.0" mnemonicParsing="false" onAction="#toAkun" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Akun" />
-                  <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="108.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/blogger.png" />
-                     </image>
-                  </ImageView>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="43.0" prefHeight="23.0" prefWidth="110.0" text="Desa" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="23.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="61.0" layoutY="632.0" text="Admin Bintang" />
-                  <Button id="btnMenuUtama" fx:id="btnChat" layoutX="30.0" layoutY="271.0" mnemonicParsing="false" onAction="#toChat" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Chat" />
-               </children>
-            </Pane>
-         </left>
-         <center>
-            <Pane id="paneMid" prefHeight="570.0" prefWidth="722.0" style="-fx-background-color: #FFFFF;" BorderPane.alignment="CENTER">
-               <children>
-                  <PieChart animated="false" layoutX="297.0" layoutY="229.0" />
-                  <Label layoutX="42.0" layoutY="27.0" text="Selamat Datang Di Aplikasi Kami Yth. Bintang">
+                  <Button id="btnMenuUtama" fx:id="btnLihatDokumen" layoutX="30.0" layoutY="272.0" mnemonicParsing="false" onAction="#toLihatDokumen" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Lihat Dokumen" />
+                  <Pane layoutY="392.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: #293b4d;" stylesheets="@../css/MenuAplikasi.css" />
+                  <Label id="btnRecent" alignment="CENTER" layoutX="37.0" layoutY="407.0" prefHeight="21.0" prefWidth="125.0" stylesheets="@../css/MenuAplikasi.css" text="Baru-baru ini" underline="true" />
+                  <Button id="btnRecent" fx:id="btnStatistik11" layoutX="11.0" layoutY="440.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="30.0" prefWidth="177.0" stylesheets="@../css/MenuAplikasi.css" text="Form Pendaftaran KTP" />
+                  <Button id="btnRecent" fx:id="btnStatistik111" layoutX="26.0" layoutY="482.0" mnemonicParsing="false" onAction="#toStatistik" prefHeight="25.0" prefWidth="147.0" stylesheets="@../css/MenuAplikasi.css" text="Surat Pendaftaran KTP" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="14.0" prefHeight="23.0" prefWidth="110.0" text="MyDesa" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="71.0" layoutY="107.0" />
-                  <TextArea editable="false" layoutX="42.0" layoutY="75.0" prefHeight="154.0" prefWidth="359.0" text="Mohon Datang Pada 30 July&#10;Untuk Mengambil KTP Anda,&#10;Diwajibkan untuk membawa&#10;dokumen untuk melaksanakan&#10;verifikasi berkas&#10;">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextArea>
-               </children></Pane>
+                  <Button id="btnMenuUtama" fx:id="btnAkun" layoutX="30.0" layoutY="327.0" mnemonicParsing="false" onAction="#toAkun" prefHeight="33.0" prefWidth="140.0" stylesheets="@../css/MenuAplikasi.css" text="Akun" />
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER" />
          </center>
          <right>
-            <Pane prefHeight="720.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+            <Pane prefHeight="720.0" prefWidth="278.0" BorderPane.alignment="CENTER" />
          </right>
       </BorderPane>
    </children>
