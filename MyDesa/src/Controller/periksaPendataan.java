@@ -1,5 +1,7 @@
 package controller;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import model.Resi;
 import model.modelKtp;
 
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -101,6 +104,16 @@ public class periksaPendataan implements Initializable {
     @FXML
     private DatePicker tFDatePicker;
 
+    @FXML
+    private Button btnLoadXML;
+
+    @FXML
+    private Button btnSimpanCSV;
+
+    @FXML
+    private Button btnSimpanXML;
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -129,10 +142,178 @@ public class periksaPendataan implements Initializable {
     }
 
     @FXML
+    private void handleSimpanXML(ActionEvent event) {
+        simpanXML();
+    }
+
+    @FXML
+    void handleSimpanCSV(ActionEvent event) {
+        simpanCSV();
+    }
+
+    @FXML
+    void handleLoadXML(ActionEvent event) {
+        bacaXML();
+    }
+
+    @FXML
     void handleSubmit(ActionEvent event) {
         ubahDataKtp();
         ubahDataResi();
 
+    }
+
+    @FXML
+    void simpanXML() {
+        ObservableList<modelKtp> currentTable = ktp.getItems();
+
+//        Admin univ = new Admin(nama, userName, password);
+//        modelKtp data = new modelKtp(dataKtp);
+        XStream xstream = new XStream(new StaxDriver());
+
+        String sxml = xstream.toXML(currentTable);
+
+        FileOutputStream f = null;
+        File file = new File("dataPendataan.xml");
+        try {
+            // membuat nama file tempat simpan xml
+            f = new FileOutputStream(file);
+            // mengubah karakter penyusun string xml sebagai bytes
+            // bentuk kode ASCII
+            byte[] bytes = sxml.getBytes("UTF-8");
+            // menulis bytes ke file
+            // menyimpan file
+            f.write(bytes);
+        } catch (Exception e) {
+            System.out.println("Perhatian: " + e.getMessage());
+
+        } finally {
+            if (f != null) {
+                try {
+                    f.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println("Data Berhasil disimpan");
+
+    }
+
+    @FXML
+    void simpanCSV() {
+        ObservableList<modelKtp> currentTable = ktp.getItems();
+        String csvFile = "dataPendataan.csv";
+
+        try {
+            FileWriter writer = null;
+            writer = new FileWriter(csvFile);
+            writer.append("ID");
+            writer.append(',');
+            writer.append("Nama");
+            writer.append(',');
+            writer.append("NIK");
+            writer.append(',');
+            writer.append("Tempat Lahir");
+            writer.append(',');
+            writer.append("Tanggal Lahir");
+            writer.append(',');
+            writer.append("Nomor HP");
+            writer.append(',');
+            writer.append("Email");
+            writer.append(',');
+            writer.append("Status");
+            writer.append(',');
+            writer.append("Pekerjaan");
+            writer.append(',');
+            writer.append("Alamat");
+            writer.append(',');
+            writer.append("Nomor KK");
+            writer.append(',');
+            writer.append("Jenis Kelamin");
+            writer.append(',');
+            writer.append("RT");
+            writer.append(',');
+            writer.append("RW");
+            writer.append(',');
+            writer.append("Golongan Darah");
+            writer.append(',');
+            writer.append("Status Kawin");
+            writer.append(',');
+            writer.append("Kewarganegaraan");
+            writer.append(',');
+            writer.append("Agama");
+            writer.append('\n');
+            for (modelKtp data : currentTable) {
+                writer.append(String.valueOf(data.getId()));
+                writer.append(',');
+                writer.append(data.getNama());
+                writer.append(',');
+                writer.append(data.getNIK());
+                writer.append(',');
+                writer.append(data.getTempatLahir());
+                writer.append(',');
+                writer.append(data.getTanggalLahir());
+                writer.append(',');
+                writer.append(data.getNomorHP());
+                writer.append(',');
+                writer.append(data.getEmail());
+                writer.append(',');
+                writer.append(data.getStatus());
+                writer.append(',');
+                writer.append(data.getPekerjaan());
+                writer.append(',');
+                writer.append(data.getAlamat());
+                writer.append(',');
+                writer.append(data.getNomorKK());
+                writer.append(',');
+                writer.append(data.getJenisKelamin());
+                writer.append(',');
+                writer.append(data.getRT());
+                writer.append(',');
+                writer.append(data.getRW());
+                writer.append(',');
+                writer.append(data.getGolDarah());
+                writer.append(',');
+                writer.append(data.getStatusKawin());
+                writer.append(',');
+                writer.append(data.getKewargaNegaraan());
+                writer.append(',');
+                writer.append(data.getAgama());
+                writer.append('\n');
+
+            }
+            writer.close();
+            System.out.println("File Berhasil Disimpan");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void bacaXML() {
+        XStream xstream = new XStream(new StaxDriver());
+//        File file = new File("data/dataPendataan.xml");
+//        Path path = Paths.get(file.getAbsolutePath());
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream("dataPendataan.xml");
+            BufferedInputStream bis = new BufferedInputStream(fis);
+            DataInputStream dis = new DataInputStream(bis);
+            String sxml = dis.readLine();
+            ObservableList<modelKtp> data = (ObservableList<modelKtp>) xstream.fromXML(sxml);
+            ktp.setItems(data);
+        } catch (Exception e) {
+            System.out.println("Perhatian: " + e.getMessage());
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     void ubahDataKtp() {
