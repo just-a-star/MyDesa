@@ -46,6 +46,8 @@ public class MenuAplikasiC {
     private Button btnAkun;
     @FXML
     private Button btnLihatDokumen;
+    @FXML
+    private Button btnChat;
 
     public void switchToMendaftar2(ActionEvent event) throws IOException {
 
@@ -104,6 +106,13 @@ public class MenuAplikasiC {
     private void toLihatDokumen(ActionEvent event) throws IOException {
         OpenScene object = new OpenScene();
         Pane halaman = object.getPane("MelihatDok");
+        homepagePane.setCenter(halaman);
+    }
+
+    @FXML
+    private void toChat(ActionEvent event) throws IOException {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("Chat2");
         homepagePane.setCenter(halaman);
     }
 
