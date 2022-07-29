@@ -101,6 +101,15 @@ public class periksaPendataan implements Initializable {
     @FXML
     private DatePicker tFDatePicker;
 
+    @FXML
+    private Button btnLoadXML;
+
+    @FXML
+    private Button btnSimpanCSV;
+
+    @FXML
+    private Button btnSimpanXML;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -126,6 +135,21 @@ public class periksaPendataan implements Initializable {
         tCAgama.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("agama"));
 
         ktp.setItems(dataKtp);
+    }
+
+    @FXML
+    void handleLoadXML(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleSimpanCSV(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleSimpanXML(ActionEvent event) {
+
     }
 
     @FXML
