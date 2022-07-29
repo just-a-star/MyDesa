@@ -4,58 +4,76 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAplikasiC">
    <children>
-      <BorderPane fx:id="homepagePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <center>
-            <Pane id="paneMid" prefHeight="570.0" prefWidth="900.0" style="-fx-background-color: #c2daf2;" BorderPane.alignment="CENTER">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="62.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="301.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="536.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="62.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="301.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="536.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-                  <Label layoutX="78.0" layoutY="67.0" text="Melihat Dokumen">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="129.0" fitWidth="178.0" layoutX="73.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/KTP%20(1).png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="143.0" fitWidth="157.0" layoutX="322.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/kk.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="153.0" fitWidth="143.0" layoutX="573.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/download.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="162.0" fitWidth="160.0" layoutX="82.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/buku.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="336.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/C:/Users/justa/Documents/Tugas%20Besar%20Semester%202/MyDesa/MyDesa/resources/22223.jpg" />
-                     </image>
-                  </ImageView>
-               </children></Pane>
-         </center>
-         <right>
-            <Pane prefHeight="720.0" prefWidth="278.0" BorderPane.alignment="CENTER" />
-         </right>
-      </BorderPane>
+      <Pane id="paneMid" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: F2F9F1;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="200.0" layoutX="62.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="200.0" layoutX="301.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="200.0" layoutX="536.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="200.0" layoutX="62.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="200.0" layoutX="301.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Label layoutX="78.0" layoutY="67.0" text="Melihat Dokumen">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="129.0" fitWidth="178.0" layoutX="99.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/id-card.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="94.0" layoutX="361.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/family.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="82.0" layoutX="600.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/document.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="98.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/booknobg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="95.0" fitWidth="86.0" layoutX="360.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/22223-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="149.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KTP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="343.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kartu Keluarga">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="582.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Akte Kelahiran">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="117.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surat Nikah">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="354.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surat Tanah">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
