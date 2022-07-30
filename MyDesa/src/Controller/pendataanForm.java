@@ -1,9 +1,12 @@
 package controller;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,11 +18,15 @@ import model.modelKtp;
 import util.DateIncrementer;
 import util.RandomString;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
-public class pendataanForm {
+public class pendataanForm implements Initializable {
     public static ObservableList<modelKtp> dataKtp = observableArrayList();
     public static ObservableList<Resi> dataResi = observableArrayList();
     int ID = 0;
@@ -74,6 +81,42 @@ public class pendataanForm {
 
     //    System.out.println(tanggalNow);
     @FXML
+    public void simpanDataXML() {
+//        ObservableList<modelKtp> dataKtp = pendataanForm.dataKtp;
+//        Admin univ = new Admin(nama, userName, password);
+//        modelKtp data = new modelKtp(dataKtp);
+
+        XStream xstream = new XStream(new StaxDriver());
+
+        String sxml = xstream.toXML(dataKtp);
+
+        FileOutputStream f = null;
+        File file = new File("dataPendataan.xml");
+        try {
+            // membuat nama file tempat simpan xml
+            f = new FileOutputStream(file);
+            // mengubah karakter penyusun string xml sebagai bytes
+            // bentuk kode ASCII
+            byte[] bytes = sxml.getBytes("UTF-8");
+            // menulis bytes ke file
+            // menyimpan file
+            f.write(bytes);
+        } catch (Exception e) {
+            System.out.println("Perhatian: " + e.getMessage());
+
+        } finally {
+            if (f != null) {
+                try {
+                    f.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println("Data Berhasil disimpan");
+    }
+
+    @FXML
     void handleBtnBack(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("/view/MenuAplikasi.fxml"));
@@ -109,6 +152,7 @@ public class pendataanForm {
         String temp15 = tfGolDarah.getText();
         status = "Pending Sedang Di Proses";
         ID = ID + 1;
+//        int ID = ();
         String keterangan = "-";
         String nomorResi = RandomString.getAlphaNumericString(10);
         String tanggalAmbil = DateIncrementer.addOneDay(3);
@@ -118,11 +162,17 @@ public class pendataanForm {
         System.out.println(dataKtp.get(0).getAgama());
         System.out.println(tanggalAmbil);
         dataResi.add(new Resi(ID, temp0, tanggalAmbil, nomorResi, keterangan, status));
+        System.out.println();
 //        int id;
 //        String nama;
 //        Date tanggal;
 //        String nomorResi;
 //        String keterangan;
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+//        simpanDataXML();
     }
 
 
