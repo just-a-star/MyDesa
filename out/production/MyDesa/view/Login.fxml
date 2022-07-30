@@ -8,34 +8,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginC">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: F2F9F1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginC">
    <children>
-      <TextField fx:id="tfUsername" layoutX="141.0" layoutY="178.0" prefHeight="49.0" prefWidth="183.0" />
-      <Label layoutX="141.0" layoutY="153.0" text="Username">
+      <TextField fx:id="tfUsername" layoutX="497.0" layoutY="274.0" prefHeight="45.0" prefWidth="239.0" />
+      <Label layoutX="497.0" layoutY="247.0" text="Username">
          <font>
-            <Font size="16.0" />
+            <Font size="18.0" />
          </font></Label>
-      <Label layoutX="143.0" layoutY="260.0" text="Password">
+      <Label layoutX="497.0" layoutY="351.0" text="Password">
          <font>
-            <Font size="16.0" />
+            <Font size="18.0" />
          </font></Label>
-      <Button fx:id="btnLogin" layoutX="178.0" layoutY="375.0" mnemonicParsing="false" onAction="#login" prefHeight="49.0" prefWidth="109.0" style="-fx-background-color: AEC3B0;" text="Login" />
-      <Label layoutX="89.0" layoutY="55.0" text="Selamat Datang Di MyDesa">
+      <Button fx:id="btnLogin" layoutX="534.0" layoutY="471.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="152.0" style="-fx-background-color: A7D1A7;" text="Login" />
+      <Label layoutX="474.0" layoutY="110.0" text="Selamat Datang Di MyDesa">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="169.0" text="Mohon Lakukan Login Untuk Verifikasi Diri">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="89.0" layoutY="91.0" text="Mohon Lakukan Login Untuk Verifikasi Diri">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
-      <Text layoutX="159.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Belum Punya Akun?" />
-      <Text layoutX="269.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar">
+      <Text layoutX="537.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Belum Punya Akun?" />
+      <Text fill="#1d8bc6" layoutX="647.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <PasswordField fx:id="tfPassword" layoutX="141.0" layoutY="294.0" prefHeight="49.0" prefWidth="183.0" />
+      <PasswordField fx:id="tfPassword" layoutX="497.0" layoutY="378.0" prefHeight="45.0" prefWidth="239.0" />
    </children>
 </AnchorPane>

@@ -32,7 +32,7 @@
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Button layoutX="229.0" layoutY="405.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="SAVE" />
+      <Button layoutX="203.0" layoutY="405.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="152.0" style="-fx-background-color: A7D1A7;" text="SAVE" />
       <Label layoutX="134.0" layoutY="58.0" text="Edit Profil">
          <font>
             <Font size="30.0" />
@@ -96,22 +96,22 @@
       </Text>
       <ImageView fitHeight="58.0" fitWidth="25.0" layoutX="386.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../resources/edit.png" />
+            <Image url="file:/C:/Users/user/OneDrive/Documents/KULIAH/TUGAS%20BESAR/MyDesa/MyDesa/resources/edit.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="58.0" fitWidth="25.0" layoutX="386.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../resources/edit.png" />
+            <Image url="file:/C:/Users/user/OneDrive/Documents/KULIAH/TUGAS%20BESAR/MyDesa/MyDesa/resources/edit.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="58.0" fitWidth="25.0" layoutX="386.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../resources/edit.png" />
+            <Image url="file:/C:/Users/user/OneDrive/Documents/KULIAH/TUGAS%20BESAR/MyDesa/MyDesa/resources/edit.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="58.0" fitWidth="25.0" layoutX="386.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../resources/edit.png" />
+            <Image url="file:/C:/Users/user/OneDrive/Documents/KULIAH/TUGAS%20BESAR/MyDesa/MyDesa/resources/edit.png" />
          </image>
       </ImageView>
    </children>
