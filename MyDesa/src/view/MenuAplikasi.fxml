@@ -72,9 +72,6 @@
                   </TextArea>
                </children></Pane>
          </center>
-         <right>
-            <Pane prefHeight="720.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
-         </right>
       </BorderPane>
    </children>
 </AnchorPane>

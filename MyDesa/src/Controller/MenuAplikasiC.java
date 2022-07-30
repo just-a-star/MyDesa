@@ -84,7 +84,9 @@ public class MenuAplikasiC {
     @FXML
     private void toPeriksaP(ActionEvent event) throws IOException {
         OpenScene object = new OpenScene();
+
         Pane halaman = object.getPane("periksaPendataan");
+        System.out.println(halaman);
         homepagePane.setCenter(halaman);
     }
 

@@ -1,5 +1,7 @@
 package controller;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.StaxDriver;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +11,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import model.Resi;
 import model.modelKtp;
+import util.WriteCSV;
 
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -133,23 +137,221 @@ public class periksaPendataan implements Initializable {
         tCStatusKawin.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("statusKawin"));
         tCKewarganegaraan.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("kewargaNegaraan"));
         tCAgama.setCellValueFactory(new PropertyValueFactory<modelKtp, String>("agama"));
+        bacaData();
 
         ktp.setItems(dataKtp);
     }
 
     @FXML
     void handleLoadXML(ActionEvent event) {
+        bacaData();
+
 
     }
 
     @FXML
     void handleSimpanCSV(ActionEvent event) {
-
+        simpanDataCSV();
     }
 
     @FXML
     void handleSimpanXML(ActionEvent event) {
+        simpanDataXML();
 
+    }
+
+    public void bacaData() {
+//        ObservableList<modelKtp> dataKtp = pendataanForm.dataKtp;
+//        ktp.getItems();
+
+        XStream xstream = new XStream(new StaxDriver());
+
+        FileInputStream f = null;
+        File file = new File("dataPendataan.xml");
+
+        try {
+            f = new FileInputStream(file);
+            int isi; // untuk menyimpan kode angka ASCII yang dibaca
+            // dari file
+            char c;
+            String sxml = "";
+            // membaca file per karakter
+            while ((isi = f.read()) != -1) {
+                c = (char) isi;
+                sxml = sxml + c;
+//                System.out.print(c);
+//                System.out.println(sxml);
+
+            }
+//            System.out.println(sxml);
+            dataKtp = (ObservableList<modelKtp>) xstream.fromXML(sxml);
+//            = () xstream.fromXML(sxml);
+            ktp.setItems(dataKtp);
+            ktp.refresh();
+
+        } catch (Exception e) {
+            System.out.println("Perhatianc: " + e.getMessage());
+        } finally {
+            if (f != null) {
+                try {
+                    f.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        System.out.println(dataKtp);
+    }
+
+    public void simpanDataXML() {
+//        ObservableList<modelKtp> dataKtp = pendataanForm.dataKtp;
+//        Admin univ = new Admin(nama, userName, password);
+//        modelKtp data = new modelKtp(dataKtp);
+
+        XStream xstream = new XStream(new StaxDriver());
+
+        String sxml = xstream.toXML(dataKtp);
+
+        FileOutputStream f = null;
+        File file = new File("dataPendataan.xml");
+        try {
+            // membuat nama file tempat simpan xml
+            f = new FileOutputStream(file);
+            // mengubah karakter penyusun string xml sebagai bytes
+            // bentuk kode ASCII
+            byte[] bytes = sxml.getBytes("UTF-8");
+            // menulis bytes ke file
+            // menyimpan file
+            f.write(bytes);
+        } catch (Exception e) {
+            System.out.println("Perhatian: " + e.getMessage());
+
+        } finally {
+            if (f != null) {
+                try {
+                    f.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println("Data Berhasil disimpan");
+    }
+
+    @FXML
+    void simpanDataCSV() {
+        ObservableList<modelKtp> currentTableData = ktp.getItems();
+        bacaData();
+        WriteCSV csvWriter = new WriteCSV();
+        final String[][] csvMatrix = new String[currentTableData.size()][17];
+        try {
+            FileWriter writer = new FileWriter("dataPendataan.csv");
+//            csvMatrix[0][1] = "ID";
+//            csvMatrix[0][2] = "Nama";
+//            csvMatrix[0][3] = "NIK";
+//            csvMatrix[0][4] = "Tempat Lahir";
+//            csvMatrix[0][5] = "Tanggal Lahir";
+//            csvMatrix[0][6] = "Nomor HP";
+//            csvMatrix[0][7] = "Email";
+//            csvMatrix[0][8] = "Status";
+//            csvMatrix[0][9] = "Pekerjaan";
+//            csvMatrix[0][10] = "Alamat";
+//            csvMatrix[0][11] = "Nomor KK";
+//            csvMatrix[0][12] = "Jenis Kelamin";
+//            csvMatrix[0][13] = "RT";
+//            csvMatrix[0][14] = "RW";
+//            csvMatrix[0][15] = "Golongan Darah";
+//            csvMatrix[0][16] = "Status Kawin";
+//            csvMatrix[0][17] = "Kewarganegaraan";
+//            csvMatrix[0][18] = "Agama";
+//
+//            csvWriter.writeCsv(csvMatrix);
+
+            writer.append("ID");
+            writer.append(",");
+            writer.append("Nama");
+            writer.append(",");
+            writer.append("NIK");
+            writer.append(",");
+            writer.append("Tempat Lahir");
+            writer.append(",");
+            writer.append("Tanggal Lahir");
+            writer.append(",");
+            writer.append("Nomor HP");
+            writer.append(",");
+            writer.append("Email");
+            writer.append(",");
+            writer.append("Status");
+            writer.append(",");
+            writer.append("Pekerjaan");
+            writer.append(",");
+            writer.append("Alamat");
+            writer.append(",");
+            writer.append("Nomor KK");
+            writer.append(",");
+            writer.append("Jenis Kelamin");
+            writer.append(",");
+            writer.append("RT");
+            writer.append(",");
+            writer.append("RW");
+            writer.append(",");
+            writer.append("Golongan Darah");
+            writer.append(",");
+            writer.append("Status Kawin");
+            writer.append(",");
+            writer.append("Kewarganegaraan");
+            writer.append(",");
+            writer.append("Agama");
+            writer.append('\n');
+
+            for (modelKtp ktp : currentTableData) {
+
+                writer.append(String.valueOf(ktp.getId()));
+                writer.append(',');
+                writer.append(ktp.getNama());
+                writer.append(',');
+                writer.append(ktp.getNIK());
+                writer.append(',');
+                writer.append(ktp.getTempatLahir());
+                writer.append(',');
+                writer.append(ktp.getTanggalLahir());
+                writer.append(',');
+                writer.append(ktp.getNomorHP());
+                writer.append(',');
+                writer.append(ktp.getEmail());
+                writer.append(',');
+                writer.append(ktp.getStatus());
+                writer.append(',');
+                writer.append(ktp.getPekerjaan());
+                writer.append(',');
+                writer.append(ktp.getAlamat());
+                writer.append(',');
+                writer.append(ktp.getNomorKK());
+                writer.append(',');
+                writer.append(ktp.getJenisKelamin());
+                writer.append(',');
+                writer.append(ktp.getRT());
+                writer.append(',');
+                writer.append(ktp.getRW());
+                writer.append(',');
+                writer.append(ktp.getGolDarah());
+                writer.append(',');
+                writer.append(ktp.getStatusKawin());
+                writer.append(',');
+                writer.append(ktp.getKewargaNegaraan());
+                writer.append(',');
+                writer.append(ktp.getAgama());
+                writer.append('\n');
+
+
+            }
+            writer.close();
+            System.out.println("Berhasil Simpan Data");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Gagal Simpan Data");
+        }
     }
 
     @FXML
@@ -190,7 +392,6 @@ public class periksaPendataan implements Initializable {
                 dataResi.setStatus(tFStatus.getText());
                 dataResi.setKeterangan(tFKeterangan.getText());
                 dataResi.setTanggalAmbil(tFDatePicker.getValue().toString());
-
                 resiC.table.setItems(currentTableDataResi);
                 resiC.table.refresh();
 //                break;

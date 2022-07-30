@@ -1,13 +1,6 @@
 package model;
 
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
 import javafx.collections.ObservableList;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
@@ -136,76 +129,5 @@ public class modelKtp extends Pengguna {
         this.agama = agama;
     }
 
-    public void simpanData(ObservableList<modelKtp> dataKtp) {
-//        Admin univ = new Admin(nama, userName, password);
-//        modelKtp data = new modelKtp(dataKtp);
-        XStream xstream = new XStream(new StaxDriver());
-
-        String sxml = xstream.toXML(dataKtp);
-
-        FileOutputStream f = null;
-        File file = new File("DataXML/dataPendataan.xml");
-        try {
-            // membuat nama file tempat simpan xml
-            f = new FileOutputStream(file);
-            // mengubah karakter penyusun string xml sebagai bytes
-            // bentuk kode ASCII
-            byte[] bytes = sxml.getBytes("UTF-8");
-            // menulis bytes ke file
-            // menyimpan file
-            f.write(bytes);
-        } catch (Exception e) {
-            System.out.println("Perhatian: " + e.getMessage());
-
-        } finally {
-            if (f != null) {
-                try {
-                    f.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        System.out.println("Data Berhasil disimpan");
-    }
-
-    public void bacaData() {
-        Admin admin = new Admin();
-        XStream xstream = new XStream(new StaxDriver());
-
-        FileInputStream f = null;
-        File file = new File("DataXML/admin.xml");
-
-        try {
-            f = new FileInputStream(file);
-            int isi; // untuk menyimpan kode angka ASCII yang dibaca
-            // dari file
-            char c;
-            String sxml = "";
-            // membaca file per karakter
-            while ((isi = f.read()) != -1) {
-                c = (char) isi;
-                sxml = sxml + c;
-//                System.out.print(c);
-//                System.out.println(sxml);
-
-            }
-//            System.out.println(sxml);
-            admin = (Admin) xstream.fromXML(sxml);
-
-        } catch (Exception e) {
-            System.out.println("Perhatianc: " + e.getMessage());
-        } finally {
-            if (f != null) {
-                try {
-                    f.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }
-        System.out.println(admin);
-    }
 
 }
